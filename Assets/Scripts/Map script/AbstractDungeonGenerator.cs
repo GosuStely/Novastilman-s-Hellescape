@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class AbstractDungeonGenerator : MonoBehaviour
 {
+    //we use protected so the only child elements can have access to these properties
     [SerializeField]
     protected TilemapVisualisator tilemapVisualisator = null;
     [SerializeField]
