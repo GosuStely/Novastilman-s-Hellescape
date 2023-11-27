@@ -9,9 +9,9 @@ public class ShowingPrefabs : MonoBehaviour
     public GameObject teleportStart;
 
     private int roomNegativeX = -17;
-    private int roomNegativeY = -10;
-    private int roomX = 10;
-    private int roomY = 10;
+    private int roomNegativeY = -9;
+    private int roomX = 17;
+    private int roomY = 9;
 
     void Start()
     {
@@ -30,6 +30,7 @@ public class ShowingPrefabs : MonoBehaviour
                 //we choose a random room from the array and put it in a variable of GameObject so we can instantiate it more clearly and debug it after that
                     GameObject currentRoom = rooms[Random.Range(0, rooms.Length - 1)];
                     Instantiate(currentRoom, vector3, Quaternion.identity);
+                
                 //we change vectors y so we can use it when we instantiate the teleport so we have a teleport in the current room but on the random place
                     vector3.y = Random.Range(roomNegativeY, roomY);
                 // we add a random x variable that we are gonna use to have a random location of the teleport
