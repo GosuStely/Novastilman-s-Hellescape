@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Dungeon_Character_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 49
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28b33d3699fb2a4485bee06c5ae6d8f
+      internalID: 1138493736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +153,35 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dungeon_Character_0: 1276567726
+      Dungeon_Character_1: 1044359514
+      Dungeon_Character_10: 927364621
+      Dungeon_Character_11: -1399072857
+      Dungeon_Character_12: -1676436927
+      Dungeon_Character_13: 2011035042
+      Dungeon_Character_14: 1172055261
+      Dungeon_Character_15: -1445555232
+      Dungeon_Character_16: -1355299349
+      Dungeon_Character_17: -1093864415
+      Dungeon_Character_18: -252504376
+      Dungeon_Character_19: 1857177898
+      Dungeon_Character_2: 1138493736
+      Dungeon_Character_20: -720096846
+      Dungeon_Character_21: 1395068186
+      Dungeon_Character_22: 1050985480
+      Dungeon_Character_23: -84006327
+      Dungeon_Character_24: -1096985413
+      Dungeon_Character_25: 992138119
+      Dungeon_Character_26: 1776938192
+      Dungeon_Character_27: 1649130223
+      Dungeon_Character_3: -2014864398
+      Dungeon_Character_4: -2130469409
+      Dungeon_Character_5: 1701611793
+      Dungeon_Character_6: -222340084
+      Dungeon_Character_7: 487459290
+      Dungeon_Character_8: 1430122341
+      Dungeon_Character_9: 1973395179
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
