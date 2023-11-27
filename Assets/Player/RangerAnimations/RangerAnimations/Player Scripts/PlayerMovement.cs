@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && !isAttacking) {
             // ShootArrow();
-            animator.Play("PlayerAttack");
+            animator.SetTrigger("Attack");
             
         }
 
