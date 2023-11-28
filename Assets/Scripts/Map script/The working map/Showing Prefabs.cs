@@ -19,16 +19,32 @@ public class ShowingPrefabs : MonoBehaviour
     }
     void VisualizePrefabs()
     {
+        bool isShopRoom = false;
         if (rooms != null)
         {
             //the position of our rooms and teleports
-            Vector3 vector3 = new Vector3(0,0,0);
+            Vector3 vector3 = new Vector3(0, 0, 0);
 
             // we make teleports and rooms that are random from the GameObject array in the lenght of the floorRooms variable
-            for (int i = 0; i <floorRooms; i++)
+            for (int i = 0; i < floorRooms; i++)
             {
                 //we choose a random room from the array and put it in a variable of GameObject so we can instantiate it more clearly and debug it after that
-                    GameObject currentRoom = rooms[Random.Range(0, rooms.Length - 1)];
+                GameObject currentRoom = new GameObject();
+                //if the room is the shop room after choosing it you cant get it second time because is zero or once per floor room
+                //you cant get the room as first room
+                if (!isShopRoom && i != 0)
+                {
+                    currentRoom = rooms[Random.Range(0, rooms.Length - 1)];
+                }
+                else
+                {
+                    currentRoom = rooms[Random.Range(1, rooms.Length - 1)];
+                }
+
+                if (currentRoom == rooms[0])
+                {
+                    isShopRoom = true;
+                }
                     Instantiate(currentRoom, vector3, Quaternion.identity);
                 
                 //we change vectors y so we can use it when we instantiate the teleport so we have a teleport in the current room but on the random place

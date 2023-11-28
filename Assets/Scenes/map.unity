@@ -304,6 +304,14 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4397072701877630692, guid: d3d824913237cce48b35a775e11bd2d9, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397072701877630692, guid: d3d824913237cce48b35a775e11bd2d9, type: 3}
+      propertyPath: startTimeBtwShot
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7666145681763727801, guid: d3d824913237cce48b35a775e11bd2d9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.53
@@ -733,6 +741,10 @@ PrefabInstance:
     - target: {fileID: 3682624381423325400, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5848621434705113049, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5848621434705113049, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
       propertyPath: m_CollisionDetection
