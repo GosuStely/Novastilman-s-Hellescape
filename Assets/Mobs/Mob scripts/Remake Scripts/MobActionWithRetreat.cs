@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MobActionWithRetreat : MonoBehaviour
 {
-    public float speed;
+    private float currentSpeed;
+    public float defaultSpeed;
     public float stoppingDistance;
     public float retreatDistance;
 
@@ -26,26 +27,62 @@ public class MobActionWithRetreat : MonoBehaviour
 
     void Update()
     {
-        //rotate to look at the player
-        transform.LookAt(player.position);
-        transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
-
         float distanceToTarget = Vector2.Distance(transform.position, player.position);
 
-        if (distanceToTarget > stoppingDistance)
+        if (distanceToTarget > 15)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            Idle();
+        }        
+        if (distanceToTarget > stoppingDistance && distanceToTarget <= 15)
+        {
+            Attack();
+            SpawnBullet();
         }
         else if (distanceToTarget < stoppingDistance && distanceToTarget > retreatDistance)
         {
-            transform.position = this.transform.position;
+            StopChasing();
+            Attack();
+            SpawnBullet();
         }
         else if (distanceToTarget < retreatDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+            Retreat();
+            SpawnBullet();
         }
 
 
+        
+    }
+
+    void Idle()
+    {
+        currentSpeed = 0f;
+        Debug.Log("Idle");
+    }
+
+    void Attack()
+    {
+        currentSpeed = defaultSpeed;
+        transform.LookAt(player.position);
+        transform.Rotate(new Vector3(0, -90, 0), Space.Self);
+        transform.position = Vector2.MoveTowards(transform.position, player.position, currentSpeed * Time.deltaTime);
+    }
+
+    void StopChasing()
+    {
+        transform.LookAt(player.position);
+    }
+
+    void Retreat()
+    {
+        currentSpeed = defaultSpeed;
+        transform.LookAt(player.position);
+        transform.Rotate(new Vector3(0, -90, 0), Space.Self);
+        transform.position = Vector2.MoveTowards(transform.position, player.position, -currentSpeed * Time.deltaTime);
+    }
+
+    void SpawnBullet()
+    {
         if (coolDownTime <= 0) //if CD time runs out, the enemy shoots new bullet
         {
             //spawn a bullet Instantiate (of the bullet, at the mob position, no rotation)

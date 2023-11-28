@@ -5,8 +5,10 @@ using static UnityEngine.GraphicsBuffer;
 
 public class MobAction : MonoBehaviour
 {
-    public float speed;
+    private float currentSpeed;
+    public float defaultSpeed;
     public float stoppingDistance;
+
     private Rigidbody2D rb;
 
     private float coolDownTime;
@@ -25,21 +27,46 @@ public class MobAction : MonoBehaviour
 
     void Update()
     {
-        //rotate to look at the player
-        transform.LookAt(player.position);
-        transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
-
         float distanceToTarget = Vector2.Distance(transform.position, player.position);
 
-        if (distanceToTarget > stoppingDistance) 
+        if (distanceToTarget > 15)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            Idle();
         }
-        else if(distanceToTarget < stoppingDistance) 
-        { 
-            transform.position = this.transform.position;
+        if (distanceToTarget > stoppingDistance && distanceToTarget <= 15)
+        {
+            Attack();
+            SpawnBullet();
         }
+        else if (distanceToTarget < stoppingDistance)
+        {
+            StopChasing();
+            Attack();
+            SpawnBullet();
+        }
+    }
 
+    void Idle()
+    {
+        currentSpeed = 0f;
+        Debug.Log("Idle");
+    }
+
+    void Attack()
+    {
+        currentSpeed = defaultSpeed;
+        transform.LookAt(player.position);
+        transform.Rotate(new Vector3(0, -90, 0), Space.Self);
+        transform.position = Vector2.MoveTowards(transform.position, player.position, currentSpeed * Time.deltaTime);
+    }
+
+    void StopChasing()
+    {
+        transform.LookAt(player.position);
+    }
+
+    void SpawnBullet()
+    {
         if (coolDownTime <= 0) //if CD time runs out, the enemy shoots new bullet
         {
             //spawn a bullet Instantiate (of the bullet, at the mob position, no rotation)
@@ -47,8 +74,8 @@ public class MobAction : MonoBehaviour
             coolDownTime = startTimeBtwShot; //if we dont do this, enemy will shoot every single frame
         }
         else
-        { 
-            coolDownTime -= Time.deltaTime; 
+        {
+            coolDownTime -= Time.deltaTime;
         }
     }
 }
