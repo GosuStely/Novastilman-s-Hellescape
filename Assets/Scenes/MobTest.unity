@@ -605,6 +605,10 @@ PrefabInstance:
       propertyPath: ATTACKSPEED
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5848621434705113049, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6183857223539476553, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.74
