@@ -409,9 +409,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room
       objectReference: {fileID: 0}
+    - target: {fileID: 2075593706725038106, guid: 6a6bcaaeb1f37ad4b87a101c285ad624, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896485082164596114, guid: 6a6bcaaeb1f37ad4b87a101c285ad624, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3262736344194522139, guid: 6a6bcaaeb1f37ad4b87a101c285ad624, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 3411343176782457283, guid: 6a6bcaaeb1f37ad4b87a101c285ad624, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3573681545832419955, guid: 6a6bcaaeb1f37ad4b87a101c285ad624, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

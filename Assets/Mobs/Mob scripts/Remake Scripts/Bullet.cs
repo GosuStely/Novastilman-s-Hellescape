@@ -31,15 +31,15 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    //this makes the bullet disappears when it touches the player's collider
+    //this makes the bullet disappears when it touches the player's or the wall collider
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Wall"))
         {
             DestroyBullet();
         }
 
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             var healthComponent = other.GetComponent<PlayerHealth>();
             if (healthComponent != null) 
