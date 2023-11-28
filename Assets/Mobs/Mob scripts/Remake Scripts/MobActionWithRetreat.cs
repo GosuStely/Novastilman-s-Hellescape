@@ -29,19 +29,18 @@ public class MobActionWithRetreat : MonoBehaviour
     {
         float distanceToTarget = Vector2.Distance(transform.position, player.position);
 
-        if (distanceToTarget > 15)
+        if (distanceToTarget > 13)
         {
             Idle();
-        }        
-        if (distanceToTarget > stoppingDistance && distanceToTarget <= 15)
+        }
+        else if (distanceToTarget > stoppingDistance && distanceToTarget <= 13)
         {
-            Attack();
+            Chasing();
             SpawnBullet();
         }
         else if (distanceToTarget < stoppingDistance && distanceToTarget > retreatDistance)
         {
-            StopChasing();
-            Attack();
+            StopChasting();
             SpawnBullet();
         }
         else if (distanceToTarget < retreatDistance)
@@ -51,15 +50,16 @@ public class MobActionWithRetreat : MonoBehaviour
         }
 
 
-        
+
     }
+
 
     void Idle()
     {
         currentSpeed = 0f;
     }
 
-    void Attack()
+    void Chasing()
     {
         currentSpeed = defaultSpeed;
         transform.LookAt(player.position);
@@ -67,9 +67,11 @@ public class MobActionWithRetreat : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.position, currentSpeed * Time.deltaTime);
     }
 
-    void StopChasing()
+    void StopChasting()
     {
         transform.LookAt(player.position);
+        transform.Rotate(new Vector3(0, -90, 0), Space.Self);
+        transform.position = this.transform.position;
     }
 
     void Retreat()
@@ -94,3 +96,4 @@ public class MobActionWithRetreat : MonoBehaviour
         }
     }
 }
+
