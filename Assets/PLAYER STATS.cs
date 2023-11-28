@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class PLAYERSTATS : MonoBehaviour
 {
-    
-    public float HP;
+    [SerializeField]
+    protected float HP;
 
-    public float DMG;
+    [SerializeField]
+    protected float DMG;
 
-    public float ATTACKSPEED;
+    [SerializeField]
+    protected float ATTACKSPEED;
 
-    public float SPEED;
-
-    private float CURRENTHP;
-
+    [SerializeField]
+    protected float SPEED;
 
 }
 

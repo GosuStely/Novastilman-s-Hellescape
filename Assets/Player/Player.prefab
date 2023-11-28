@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5848621434705113049}
   - component: {fileID: 1874199770886540228}
   - component: {fileID: 5214514198658817034}
+  - component: {fileID: 7424951131278752626}
   - component: {fileID: 3833463801161886172}
   m_Layer: 0
   m_Name: Player
@@ -173,11 +174,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aca8cc6ca20121498d62f171536ea3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  HP: 0
+  DMG: 0
+  ATTACKSPEED: 1
+  SPEED: 5
   arrowPrefab: {fileID: 6325887549563639829, guid: 934ac33831c1ce64ba85f445764f02bc, type: 3}
-  bulletSpeed: 10
-  fireDelay: 10
   firePoint: {fileID: 8536014390528307515}
+--- !u!114 &7424951131278752626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2163557008212373734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25675a183cfb52d4d90cd25e56431a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 100
+  DMG: 30
+  ATTACKSPEED: 1
+  SPEED: 5
 --- !u!95 &3833463801161886172
 Animator:
   serializedVersion: 5
