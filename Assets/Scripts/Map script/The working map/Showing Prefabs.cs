@@ -7,6 +7,9 @@ public class ShowingPrefabs : MonoBehaviour
     public int floorRooms;
     public GameObject[] rooms;
     public GameObject teleportStart;
+    //DOTO use the mobs
+    public GameObject rangeMob;
+    public GameObject meleeMob;
 
     private int roomNegativeX = -17;
     private int roomNegativeY = -9;
@@ -45,16 +48,20 @@ public class ShowingPrefabs : MonoBehaviour
         //you cant get the room as first room
         if (!isShopRoom && i != 0)
         {
-            currentRoom = rooms[Random.Range(0, rooms.Length - 1)];
+            currentRoom = rooms[Random.Range(0, rooms.Length - 2)];
         }
         else
         {
-            currentRoom = rooms[Random.Range(1, rooms.Length - 1)];
+            currentRoom = rooms[Random.Range(1, rooms.Length - 2)];
         }
 
         if (currentRoom == rooms[0])
         {
             isShopRoom = true;
+        }
+        if (i == floorRooms - 1)
+        {
+            currentRoom = rooms[rooms.Length - 1];
         }
         Instantiate(currentRoom, vector3, Quaternion.identity);
     }
