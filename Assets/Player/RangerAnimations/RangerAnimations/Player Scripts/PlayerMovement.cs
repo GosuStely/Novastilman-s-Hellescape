@@ -1,12 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : PLAYERSTATS
 {
-    public float speed = 10f;
+    private float speed;
     private Rigidbody2D rb;
     private Animator animator;
     private bool isFacingRight = true;
@@ -14,12 +15,19 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isAttacking;
 
+    public GameObject arrowPrefab;
+    public float bulletSpeed = 10f;
+    private float nextFire = 0.0f;
+    public float fireDelay = 1f;
+    public Transform firePoint; // firePoint 
+
     // Animation states
     const string PLAYER_IDLE = "PlayerIdle";
     const string PLAYER_RUN = "PlayerRun";
     const string PLAYER_ATTACK = "PlayerAttack";
 
     void Start() {
+        speed = SPEED;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         isAttacking = false;
@@ -32,12 +40,6 @@ public class PlayerMovement : MonoBehaviour
         float moveHorizontal = 0;
         float moveVertical = 0;
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isAttacking) {
-            // ShootArrow();
-            animator.SetTrigger("Attack");
-            
-        }
-
         // Checking input
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) {
             moveHorizontal = Input.GetAxis("Horizontal");
@@ -47,6 +49,15 @@ public class PlayerMovement : MonoBehaviour
             ChangeAnimationState(PLAYER_RUN);
         } else {
             ChangeAnimationState(PLAYER_IDLE);
+        }
+
+        float shootHorizontal = Input.GetAxis("ShootHorizontal");
+        float shootVertical = Input.GetAxis("ShootVertical");
+
+        if ((shootHorizontal != 0 || shootVertical != 0) && Time.time > nextFire && !isAttacking) {
+            Shoot(shootHorizontal, shootVertical);
+            animator.SetTrigger("Attack");
+            nextFire = Time.time + fireDelay;
         }
 
         // Flip
@@ -74,7 +85,13 @@ public class PlayerMovement : MonoBehaviour
         currentState = newState;
     }
 
-    void ShootArrow() {
-
+    void Shoot(float x, float y) {
+        GameObject arrow = Instantiate(arrowPrefab, firePoint.position, Quaternion.Euler(0, 0, (x > 0) ? 90 : 270));
+        arrow.AddComponent<Rigidbody2D>().gravityScale = 0;
+        arrow.GetComponent<Rigidbody2D>().velocity = new Vector3(
+            (x < 0) ? Mathf.Floor(x) * bulletSpeed : Mathf.Ceil(x) * bulletSpeed, 
+            (y < 0) ? Mathf.Floor(y) * bulletSpeed : Mathf.Ceil(y) * bulletSpeed,
+            0
+        );
     }
 }
