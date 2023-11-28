@@ -233,6 +233,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5214514198658817034, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
+      propertyPath: SPEED
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214514198658817034, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
       propertyPath: fireDelay
       value: 1.5
       objectReference: {fileID: 0}
