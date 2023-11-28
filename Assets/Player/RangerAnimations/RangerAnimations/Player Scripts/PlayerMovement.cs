@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 10f;
+    private float speed;
     private Rigidbody2D rb;
     private Animator animator;
     private bool isFacingRight = true;
@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     const string PLAYER_ATTACK = "PlayerAttack";
 
     void Start() {
+        speed = speed;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         isAttacking = false;
