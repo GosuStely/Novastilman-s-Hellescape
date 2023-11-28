@@ -16,18 +16,24 @@ public class PlayerMovement : PLAYERSTATS
     private bool isAttacking;
 
     public GameObject arrowPrefab;
-    public float bulletSpeed = 10f;
+    private float bulletSpeed = 10f;
     private float nextFire = 0.0f;
-    public float fireDelay = 1f;
+    private float fireDelay = 1f;
     public Transform firePoint; // firePoint 
+    private float playerHitpoint = 100f;
+    private float playerDamage = 3f;
+    private float currentHP;
 
     // Animation states
     const string PLAYER_IDLE = "PlayerIdle";
     const string PLAYER_RUN = "PlayerRun";
-    const string PLAYER_ATTACK = "PlayerAttack";
 
     void Start() {
         speed = SPEED;
+        fireDelay = ATTACKSPEED;
+        playerHitpoint = HP;
+        playerDamage = DMG;
+        currentHP = HP;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         isAttacking = false;
