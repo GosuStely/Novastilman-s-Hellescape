@@ -5,7 +5,7 @@ using UnityEngine;
 public class PLAYERSTATS : MonoBehaviour
 {
     
-    public float HP = 9f;
+    public float HP;
 
     public float DMG;
 
@@ -13,7 +13,7 @@ public class PLAYERSTATS : MonoBehaviour
 
     public float SPEED;
 
-    public float CURRENTHP;
+    private float CURRENTHP;
 
 
 }

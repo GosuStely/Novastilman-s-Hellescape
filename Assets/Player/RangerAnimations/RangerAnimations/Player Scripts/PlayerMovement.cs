@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : PLAYERSTATS
 {
     private float speed;
     private Rigidbody2D rb;
@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     const string PLAYER_ATTACK = "PlayerAttack";
 
     void Start() {
-        speed = speed;
+        speed = SPEED;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         isAttacking = false;
