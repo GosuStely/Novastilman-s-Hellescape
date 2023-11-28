@@ -15,6 +15,7 @@ public class Bullet : MonoBehaviour
 
         //target = position of the player when the bullet is spawned
         target = new Vector2(player.position.x, player.position.y);
+        //player.position = (player.transform.position - this.transform.position).normalized;    
     }
 
     void Update()
@@ -25,21 +26,23 @@ public class Bullet : MonoBehaviour
         //if we want to make it harder, and the bullet follow the player we can switch to this
         //transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         //but then we have to make it disappear after a period of time of it will follow the player forever
+
         if(transform.position.x == target.x && transform.position.y == target.y) 
         {
+            
             DestroyBullet();
         }
     }
 
-    //this makes the bullet disappears when it touches the player's collider
+    //this makes the bullet disappears when it touches the player's or the wall collider
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Wall"))
         {
             DestroyBullet();
         }
 
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             var healthComponent = other.GetComponent<PlayerHealth>();
             if (healthComponent != null) 
