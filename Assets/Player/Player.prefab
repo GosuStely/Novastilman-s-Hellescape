@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1874199770886540228}
   - component: {fileID: 5214514198658817034}
   - component: {fileID: 3833463801161886172}
-  - component: {fileID: 9211997121770582802}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -175,6 +174,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  arrowPrefab: {fileID: 6325887549563639829, guid: 934ac33831c1ce64ba85f445764f02bc, type: 3}
+  bulletSpeed: 10
+  fireDelay: 10
+  firePoint: {fileID: 8536014390528307515}
 --- !u!95 &3833463801161886172
 Animator:
   serializedVersion: 5
@@ -196,20 +199,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &9211997121770582802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2163557008212373734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 644e93b5ed6eff8499341cf46debe0f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 8536014390528307515}
-  arrow: {fileID: 6325887549563639829, guid: 934ac33831c1ce64ba85f445764f02bc, type: 3}
 --- !u!1 &7214219486548635450
 GameObject:
   m_ObjectHideFlags: 0

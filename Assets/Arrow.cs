@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Arrow : PLAYERSTATS
 {
+<<<<<<< Updated upstream
     public Rigidbody2D rb;
     private float speed;
     PlayerMovement player;
+=======
+    public float lifeTime = 1f;
+>>>>>>> Stashed changes
 
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< Updated upstream
         speed = ATTACKSPEED;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         if (player.transform.rotation.y >= 0) {
@@ -20,6 +25,13 @@ public class Arrow : PLAYERSTATS
         }
         
         Destroy(gameObject, 2f);
+=======
+        StartCoroutine(DeathDelay());
+>>>>>>> Stashed changes
     }
 
+    IEnumerator DeathDelay() {
+        yield return new WaitForSeconds(lifeTime);
+        Destroy(gameObject);
+    }
 }
