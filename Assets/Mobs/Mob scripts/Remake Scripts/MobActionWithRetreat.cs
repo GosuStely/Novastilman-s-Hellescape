@@ -57,7 +57,6 @@ public class MobActionWithRetreat : MonoBehaviour
     void Idle()
     {
         currentSpeed = 0f;
-        Debug.Log("Idle");
     }
 
     void Attack()
