@@ -29,11 +29,11 @@ public class MobActionWithRetreat : MonoBehaviour
     {
         float distanceToTarget = Vector2.Distance(transform.position, player.position);
 
-        if (distanceToTarget > 13)
+        if (distanceToTarget > 45)
         {
             Idle();
         }
-        else if (distanceToTarget > stoppingDistance && distanceToTarget <= 13)
+        else if (distanceToTarget > stoppingDistance && distanceToTarget <= 45)
         {
             Chasing();
             SpawnBullet();
