@@ -246,7 +246,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.5
+  orthographic size: 11
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -296,8 +296,10 @@ MonoBehaviour:
   - {fileID: 1689175459837697240, guid: 7a3798124e1ca2a4ea7a2835ec7ab44b, type: 3}
   - {fileID: 1689175459837697240, guid: c5f3a3e50177db44c86b3305697b1565, type: 3}
   - {fileID: 1689175459837697240, guid: 563f45ebdfc6e3f4d9eb47a98c68f294, type: 3}
-  - {fileID: 1689175459837697240, guid: 9673f2d1593247d4aa5c45aeee1b5701, type: 3}
+  - {fileID: 1689175459837697240, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
   teleportStart: {fileID: 6362344929012329049, guid: 488a98fcfbe2e9d4c9a0fb583d160b9e, type: 3}
+  rangeMob: {fileID: 0}
+  meleeMob: {fileID: 0}
 --- !u!1 &615347695
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +525,10 @@ PrefabInstance:
     - target: {fileID: 493670183541609525, guid: d3d824913237cce48b35a775e11bd2d9, type: 3}
       propertyPath: m_Name
       value: MobRetreat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397072701877630692, guid: d3d824913237cce48b35a775e11bd2d9, type: 3}
+      propertyPath: startTimeBtwShot
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7666145681763727801, guid: d3d824913237cce48b35a775e11bd2d9, type: 3}
       propertyPath: m_LocalPosition.x
