@@ -1,9 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class PlayerMovement : PLAYERSTATS
 {
@@ -57,13 +62,17 @@ public class PlayerMovement : PLAYERSTATS
             ChangeAnimationState(PLAYER_IDLE);
         }
 
+        // shooting inputs: left, right, up and down arrow keys.
         float shootHorizontal = Input.GetAxis("ShootHorizontal");
         float shootVertical = Input.GetAxis("ShootVertical");
 
         if ((shootHorizontal != 0 || shootVertical != 0) && Time.time > nextFire && !isAttacking) {
-            Shoot(shootHorizontal, shootVertical);
-            animator.SetTrigger("Attack");
-            nextFire = Time.time + fireDelay;
+            // checking if the player's velocity (both vertical and horizontal) is equal to 0.
+            if (moveHorizontal == 0 && moveVertical == 0) {
+                Shoot(shootHorizontal, shootVertical);
+                animator.SetTrigger("Attack");
+                nextFire = Time.time + fireDelay;
+            }
         }
 
         // Flip
@@ -92,11 +101,24 @@ public class PlayerMovement : PLAYERSTATS
     }
 
     void Shoot(float x, float y) {
-        GameObject arrow = Instantiate(arrowPrefab, firePoint.position, Quaternion.Euler(0, 0, (x > 0) ? 90 : 270));
-        arrow.AddComponent<Rigidbody2D>().gravityScale = 0;
+        GameObject arrow = Instantiate(arrowPrefab, firePoint.position, Quaternion.Euler(0, 0, (x > 0) ? 90 : 
+        (y > 0) ? 180 : (y < 0) ? 0 : 270)); // if x > 0 = 90 degree, else if y > 0 = 180 degree, else if y < 0 = 0 degree and else if x < 0 = 270 degree.
+
+
+        // checking if the player shoots to a right direction while being rotated to left, then the player flips itself.
+        // the same logic goes if the player is facing to the right direction.
+        if (Input.GetKey(KeyCode.LeftArrow) && isFacingRight) {
+            Flip();
+            isFacingRight = false;
+        } else if (Input.GetKey(KeyCode.RightArrow) && !isFacingRight) {
+            Flip();
+            isFacingRight = true;
+        }
+
+        arrow.AddComponent<Rigidbody2D>().gravityScale = 0; // getting arrow physics component.
         arrow.GetComponent<Rigidbody2D>().velocity = new Vector3(
-            (x < 0) ? Mathf.Floor(x) * bulletSpeed : Mathf.Ceil(x) * bulletSpeed, 
-            (y < 0) ? Mathf.Floor(y) * bulletSpeed : Mathf.Ceil(y) * bulletSpeed,
+            (x < 0) ? Mathf.Floor(x) * bulletSpeed : Mathf.Ceil(x) * bulletSpeed, // checking if x direction is on left, else: checking if x direction is on right and then applying force.
+            (y < 0) ? Mathf.Floor(y) * bulletSpeed : Mathf.Ceil(y) * bulletSpeed, // chceking y directions and applying force.
             0
         );
     }
