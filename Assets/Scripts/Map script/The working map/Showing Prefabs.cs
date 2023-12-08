@@ -5,7 +5,15 @@ using UnityEngine;
 public class ShowingPrefabs : MonoBehaviour
 {
     public int floorRooms;
-    public GameObject[] rooms;
+    public GameObject[] FloorOne;
+    public GameObject[] FloorTwo;
+    public GameObject[] FloorThree;
+    public GameObject[] FloorFour;
+    public GameObject[] FloorFive;
+    public GameObject[] FloorSix;
+    public GameObject[] FloorSeven;
+    public GameObject[] FloorEight;
+    public GameObject[] FloorNine;
     public GameObject teleportStart;
     //DOTO use the mobs
     public GameObject rangeMob;
@@ -16,30 +24,68 @@ public class ShowingPrefabs : MonoBehaviour
     private int roomX = 17;
     private int roomY = 9;
     bool isShopRoom = false;
+    Vector3 vector3 = new Vector3(0, 0, 0);
 
     void Start()
     {
-        VisualizePrefabs();
+        FloorVisulizer();
     }
-    void VisualizePrefabs()
+    public void FloorVisulizer()
     {
-        if (rooms != null)
+        // for the next 9 loops each one generated the said floor
+        for (int i = 1; i <= 9; i++)
+        {
+            switch (i)
+            {
+                case 1:
+                    VisualizePrefabs(FloorOne);
+                    break;
+                case 2:
+                    VisualizePrefabs(FloorTwo);
+                    break;
+                case 3:
+                    VisualizePrefabs(FloorThree);
+                    break;
+                case 4:
+                    VisualizePrefabs(FloorFour);
+                    break;
+                case 5:
+                    VisualizePrefabs(FloorFive);
+                    break;
+                case 6:
+                    VisualizePrefabs(FloorSix);
+                    break;
+                case 7:
+                    VisualizePrefabs(FloorSeven);
+                    break;
+                case 8:
+                    VisualizePrefabs(FloorEight);
+                    break;
+                case 9:
+                    VisualizePrefabs(FloorNine);
+                    break;
+            }
+        }
+    }
+    public void VisualizePrefabs(GameObject[] rooms)
+    {
+        if (rooms != null || rooms.Length != 0)
         {
 
             //the position of our rooms and teleports
-            Vector3 vector3 = new Vector3(0, 0, 0);
             // we make teleports and rooms that are random from the GameObject array in the lenght of the floorRooms variable
             for (int i = 0; i < floorRooms; i++)
             {
 
-                showRooms(i,vector3);
+                showRooms(i,vector3, rooms);
                 showTeleports(vector3);
                 vector3.x += 80;
                 vector3.y = 0;
             }
         }
     }
-    void showRooms(int i, Vector3 vector3)
+
+    void showRooms(int i, Vector3 vector3, GameObject[] rooms)
     {
 
         //we choose a random room from the array and put it in a variable of GameObject so we can instantiate it more clearly and debug it after that

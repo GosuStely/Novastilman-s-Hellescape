@@ -197,7 +197,7 @@ MonoBehaviour:
   defaultSpeed: 2
   stoppingDistance: 4
   retreatDistance: 3
-  startTimeBtwShot: 1.5
+  startTimeBtwShot: 0
   bullet: {fileID: 7114929176774918932, guid: 19952800da1d58647a340ce808e0409d, type: 3}
   player: {fileID: 0}
 --- !u!114 &3311853575408494834
