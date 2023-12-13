@@ -1,0 +1,19 @@
+How To Convert/Downsample Audio Files:
+
+---
+
+1. Download Audacity at https://www.audacityteam.org/download/
+
+2. Open up Audacity and load the audio file of your choosing
+
+3. On the main button tabs near the top left corner, select "File", and then select "Export Audio"
+
+4. Directly under the File name, you will see the types of sampling you can choose. Press the button to the right of "Save as type:"
+	to view a drop-down menu of different audio conversions. 
+
+5. Select a type of audio conversion (Note: Selecting "Options..." under the "Save" and "Cancel" buttons will allow you to further
+	customize your type of audio conversion).
+
+6. Press "Save" to bring up the "Edit Metadata" menu. Leave everything unchanged and select "OK" at the bottom. 
+
+---

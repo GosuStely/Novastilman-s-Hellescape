@@ -1,0 +1,40 @@
+---------------------------------- RPG MUSIC PACK: LITE EDITION II --------------------------------------
+
+                                         Note to Developers
+                                         -----------------
+Greetings, fellow creatives!
+
+Thank-you heartily for purchasing this music pack. Over the course of several months, my brother (Adam) and I have poured our hearts
+into creating customizable and memorable music specifically for RPG games. We are overjoyed that you decided to purchase our pack!
+
+I hope you consider leaving a review at https://assetstore.unity.com/publishers/43545
+
+-------
+
+Within this music pack, we have created 5 RPG tunes with Fade Outs, Loops, and Short Loops Folders:
+
+	() The Fade Outs Folder: Used to play one-shot tracks that are only used once. 
+
+	() The Loops Folder: Used to loop music indefinitely. This is the most common use of this music pack.
+
+	() The Short Loops Folder: Used to loop certain sections of each song. You can also mix together different short loops for 
+		interesting results.
+
+-------
+
+All audio assets are rendered in WAV at 44.1 Khz and 16Bit.
+
+Do you need custom video-game music for your project? Drop me an email:
+
+
+	alec.weesner@gmail.com
+
+	http://www.alecweesner.com/
+
+
+
+Thank-you again for purchasing this music pack! Please consider leaving us a review at
+
+https://assetstore.unity.com/publishers/43545
+
+-----------------------
