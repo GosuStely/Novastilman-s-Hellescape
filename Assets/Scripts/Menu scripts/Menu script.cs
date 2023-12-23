@@ -11,11 +11,11 @@ public class Menuscript : MonoBehaviour
     }
     public void GoToSettingMenu()
     {
-        SceneManager.LoadSceneAsync("SettingsMenu");
+        SceneManager.LoadSceneAsync(2);
     }
     public void GoToMainMenu()
     {
-        SceneManager.LoadSceneAsync("MainMenu");
+        SceneManager.LoadSceneAsync(0);
     }
     public void Quit()
     {
