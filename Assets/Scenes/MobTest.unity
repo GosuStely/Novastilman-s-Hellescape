@@ -504,7 +504,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6183857223539476553, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183857223539476553, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6183857223539476553, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -688,6 +692,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4855970444647760400, guid: a7b85d1f437af804f8c761d56c8b042b, type: 3}
+      propertyPath: startTimeBtwShots
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6394487618005071031, guid: a7b85d1f437af804f8c761d56c8b042b, type: 3}
       propertyPath: m_Name
       value: StoneSlab
