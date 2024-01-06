@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &793101760 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8536014390528307515, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
-  m_PrefabInstance: {fileID: 1669446756}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1043864966
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,22 +226,6 @@ PrefabInstance:
     - target: {fileID: 2163557008212373734, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5214514198658817034, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
-      propertyPath: SPEED
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5214514198658817034, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
-      propertyPath: fireDelay
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5214514198658817034, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
-      propertyPath: firePoint
-      value: 
-      objectReference: {fileID: 793101760}
-    - target: {fileID: 5214514198658817034, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
-      propertyPath: bulletSpeed
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6183857223539476553, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
       propertyPath: m_LocalPosition.x
