@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 746442022866313226}
   m_Layer: 0
   m_Name: Arrow
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,13 +138,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6325887549563639829}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58c1d32754f22934d940f6ff00a27eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 0
-  DMG: 0
-  ATTACKSPEED: 0
-  SPEED: 0
-  lifeTime: 1
+  arrow: {fileID: 6325887549563639829}

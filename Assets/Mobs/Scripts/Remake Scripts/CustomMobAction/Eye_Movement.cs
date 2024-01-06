@@ -28,6 +28,8 @@ public class Eye_Movement : MonoBehaviour
     private bool isInChaseRange;
     private bool isInAttackRange;
 
+    [SerializeField] private int HP = 2;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -88,5 +90,19 @@ public class Eye_Movement : MonoBehaviour
         GameObject bullet = Instantiate(projectile, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Arrow")
+        {
+            Destroy(collision.gameObject);
+
+            HP -= 1;
+            if (HP <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

@@ -27,6 +27,8 @@ public class Golemn_Movement : MonoBehaviour
     private bool isInChaseRange;
     private bool isInAttackRange;
 
+    [SerializeField] private int HP = 3;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -85,8 +87,22 @@ public class Golemn_Movement : MonoBehaviour
 
     //void Shoot()
     //{
-      //  GameObject bullet = Instantiate(projectile, firePoint.position, firePoint.rotation);
-       // Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-        //rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+    //  GameObject bullet = Instantiate(projectile, firePoint.position, firePoint.rotation);
+    // Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+    //rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
     //}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Arrow")
+        {
+            Destroy(collision.gameObject);
+
+            HP -= 1;
+            if (HP <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }

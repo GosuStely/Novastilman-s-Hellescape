@@ -131,13 +131,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1874199770886540228, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2163557008212373734, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5214514198658817034, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
+      propertyPath: HP
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6183857223539476553, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.32
+      value: 2.86
       objectReference: {fileID: 0}
     - target: {fileID: 6183857223539476553, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -174,6 +182,10 @@ PrefabInstance:
     - target: {fileID: 6183857223539476553, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424951131278752626, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
+      propertyPath: HP
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -589,7 +601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7919005252768109215, guid: dac24d7edeef74441bd31651a5574369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -14.25
       objectReference: {fileID: 0}
     - target: {fileID: 7919005252768109215, guid: dac24d7edeef74441bd31651a5574369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -650,7 +662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7379303573888168552, guid: a7b85d1f437af804f8c761d56c8b042b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.67
+      value: -16.23
       objectReference: {fileID: 0}
     - target: {fileID: 7379303573888168552, guid: a7b85d1f437af804f8c761d56c8b042b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -744,6 +756,10 @@ PrefabInstance:
     - target: {fileID: 2924026257857788771, guid: dd1016e5c3f7deb4fb04ecdc23661875, type: 3}
       propertyPath: m_Name
       value: Fire_Golemn
+      objectReference: {fileID: 0}
+    - target: {fileID: 3073691938303305577, guid: dd1016e5c3f7deb4fb04ecdc23661875, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

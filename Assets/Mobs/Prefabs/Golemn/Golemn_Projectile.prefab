@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8464628206199648523}
   - component: {fileID: 6531183273839834610}
   - component: {fileID: 5676813834640402592}
-  - component: {fileID: 4818781278550320799}
+  - component: {fileID: 7941079625982244867}
   m_Layer: 0
   m_Name: Golemn_Projectile
   m_TagString: Untagged
@@ -181,7 +181,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4818781278550320799
+--- !u!114 &7941079625982244867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5950324280885363593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfba2adfadc0a5244aec8d11f9506c73, type: 3}
+  m_Script: {fileID: 11500000, guid: bad8730443ea80d428dc63b19c4526dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10

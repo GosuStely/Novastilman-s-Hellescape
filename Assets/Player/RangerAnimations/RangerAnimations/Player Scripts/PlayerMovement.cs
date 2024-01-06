@@ -25,9 +25,10 @@ public class PlayerMovement : PLAYERSTATS
     private float nextFire = 0.0f;
     private float fireDelay = 1f;
     public Transform firePoint; // firePoint 
-    private float playerHitpoint = 100f;
+    [SerializeField] private float playerHitpoint;
     private float playerDamage = 3f;
-    private float currentHP;
+
+    private Arrow arrow;
 
     // Animation states
     const string PLAYER_IDLE = "PlayerIdle";
@@ -38,10 +39,10 @@ public class PlayerMovement : PLAYERSTATS
         fireDelay = ATTACKSPEED;
         playerHitpoint = HP;
         playerDamage = DMG;
-        currentHP = HP;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         isAttacking = false;
+        arrow = GetComponent<Arrow>();
     }
 
     // Update is called once per frame
@@ -69,7 +70,7 @@ public class PlayerMovement : PLAYERSTATS
         if ((shootHorizontal != 0 || shootVertical != 0) && Time.time > nextFire && !isAttacking) {
             // checking if the player's velocity (both vertical and horizontal) is equal to 0.
             if (moveHorizontal == 0 && moveVertical == 0) {
-                Shoot(shootHorizontal, shootVertical);
+                Shoot(shootHorizontal, shootVertical); // shoot!
                 animator.SetTrigger("Attack");
                 nextFire = Time.time + fireDelay;
             }
@@ -104,7 +105,6 @@ public class PlayerMovement : PLAYERSTATS
         GameObject arrow = Instantiate(arrowPrefab, firePoint.position, Quaternion.Euler(0, 0, (x > 0) ? 90 : 
         (y > 0) ? 180 : (y < 0) ? 0 : 270)); // if x > 0 = 90 degree, else if y > 0 = 180 degree, else if y < 0 = 0 degree and else if x < 0 = 270 degree.
 
-
         // checking if the player shoots to a right direction while being rotated to left, then the player flips itself.
         // the same logic goes if the player is facing to the right direction.
         if (Input.GetKey(KeyCode.LeftArrow) && isFacingRight) {
@@ -122,4 +122,15 @@ public class PlayerMovement : PLAYERSTATS
             0
         );
     }
+
+    public void TakeDamage(int amount)
+    {
+        playerHitpoint -= amount;
+        if (playerHitpoint <= 0)
+        {
+            //Add Death animation
+            Destroy(gameObject);
+        }
+    }
+
 }
