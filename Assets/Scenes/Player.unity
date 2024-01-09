@@ -227,18 +227,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3682624381423325400, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -281941829, guid: efcc089f7000cc440ad816bc52bb9c90, type: 3}
-    - target: {fileID: 3682624381423325400, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5214514198658817034, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
-      propertyPath: bombPrefab
-      value: 
-      objectReference: {fileID: 7807195891350963934, guid: 3f04244a43e2fa541a15effcca62fc54, type: 3}
     - target: {fileID: 6183857223539476553, guid: 5cecff206db878f4ea0500010aa690cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.04563456

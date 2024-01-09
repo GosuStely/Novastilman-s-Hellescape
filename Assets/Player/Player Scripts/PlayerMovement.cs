@@ -66,7 +66,8 @@ public class PlayerMovement : PLAYERSTATS
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) {
-            Instantiate(bombPrefab, transform.position, Quaternion.identity);
+            var copy = Instantiate(bombPrefab, new Vector3(transform.position.x + 0.5f, transform.position.y -0.85f, transform.position.z), Quaternion.identity);
+            Destroy(copy, 2.5f);
         }
 
         // shooting inputs: left, right, up and down arrow keys.
