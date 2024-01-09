@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -281941829, guid: efcc089f7000cc440ad816bc52bb9c90, type: 3}
+  m_Sprite: {fileID: -1166218213, guid: beb9b388f2f9725429087777663deed9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -180,6 +180,7 @@ MonoBehaviour:
   SPEED: 5
   arrowPrefab: {fileID: 6325887549563639829, guid: 934ac33831c1ce64ba85f445764f02bc, type: 3}
   firePoint: {fileID: 8536014390528307515}
+  playerHitpoint: 0
 --- !u!114 &7424951131278752626
 MonoBehaviour:
   m_ObjectHideFlags: 0

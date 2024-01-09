@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bfa7317b92fd8ef4c8dea5ec7993d9ad
+guid: 680429046b780af4ea5fbaf82342bb23
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,20 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,169 +110,274 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_Run_Up_0
+      name: NewPlayerShootDown_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad08c28f40e425c41840d5ebbc49e909
-      internalID: -165352360
+      spriteID: 3437a810354ad4a418be2c0dc4e6fa3d
+      internalID: -1488324691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_Up_1
+      name: NewPlayerShootDown_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e72ac3919be0b24c8e8f3373581c3f2
-      internalID: 1341163814
+      spriteID: 65d3ae5465a833a4ead42da2cd2de2ff
+      internalID: -1960952110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_Up_2
+      name: NewPlayerShootDown_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1afb44580e90ed54cb2f9738992469cd
-      internalID: 1070673608
+      spriteID: 7acda94fba14ab04d8066befec432c05
+      internalID: -294759753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_Up_3
+      name: NewPlayerShootDown_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4c22ab6c8271174eb24cba5c307a99b
-      internalID: -1881853777
+      spriteID: cd4065b587bd1494cb407e7c1f6c2ec4
+      internalID: 717803113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_Up_4
+      name: NewPlayerShootDown_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d28374a91d255e4582f8ba1b0c700b3
-      internalID: 346054594
+      spriteID: 629c2ea87312d0c4f8545a912303c2a1
+      internalID: 495716016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_Up_5
+      name: NewPlayerShootDown_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6448109fdb0e205449f57f0e5864f096
-      internalID: 1648532898
+      spriteID: 476520c8f66d6f244bbd57cf588a4337
+      internalID: 1065408762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_Up_6
+      name: NewPlayerShootDown_6
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb24288e52e764a43a09574ba72d72b0
-      internalID: 592374535
+      spriteID: 37ee927f387a5614fb2f623e95a2c0bf
+      internalID: 1205086694
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_Up_7
+      name: NewPlayerShootDown_7
       rect:
         serializedVersion: 2
         x: 224
         y: 0
         width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 710c555b218d49d459b0a18dd456737a
-      internalID: 495333117
+      spriteID: fcee5f61ddc4c6644a6fd714f69cd95b
+      internalID: 1312711189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewPlayerShootDown_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a8a4f0a493f9a4e8d0c762db2e78ed
+      internalID: -1261914005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewPlayerShootDown_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff66a998ea7d8cc4eb2bd27c2f2eb837
+      internalID: -165596631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewPlayerShootDown_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae131ba54b0cbd24a87a694c25401934
+      internalID: -450181226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewPlayerShootDown_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c2199b2e393bc489f0a67e8958831a
+      internalID: 853399923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewPlayerShootDown_12
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 0
+        width: 32
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f804f99dd8b1c74ab3102bfd082389b
+      internalID: 436027890
       vertices: []
       indices: 
       edges: []
@@ -301,14 +393,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_Run_Up_0: -165352360
-      Player_Run_Up_1: 1341163814
-      Player_Run_Up_2: 1070673608
-      Player_Run_Up_3: -1881853777
-      Player_Run_Up_4: 346054594
-      Player_Run_Up_5: 1648532898
-      Player_Run_Up_6: 592374535
-      Player_Run_Up_7: 495333117
+      NewPlayerShootDown_0: -1488324691
+      NewPlayerShootDown_1: -1960952110
+      NewPlayerShootDown_10: -450181226
+      NewPlayerShootDown_11: 853399923
+      NewPlayerShootDown_12: 436027890
+      NewPlayerShootDown_2: -294759753
+      NewPlayerShootDown_3: 717803113
+      NewPlayerShootDown_4: 495716016
+      NewPlayerShootDown_5: 1065408762
+      NewPlayerShootDown_6: 1205086694
+      NewPlayerShootDown_7: 1312711189
+      NewPlayerShootDown_8: -1261914005
+      NewPlayerShootDown_9: -165596631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
