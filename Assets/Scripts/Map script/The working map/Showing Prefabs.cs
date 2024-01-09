@@ -15,9 +15,6 @@ public class ShowingPrefabs : MonoBehaviour
     public GameObject[] FloorEight;
     public GameObject[] FloorNine;
     public GameObject teleportStart;
-    //DOTO use the mobs
-    public GameObject rangeMob;
-    public GameObject meleeMob;
 
     private int roomNegativeX = -17;
     private int roomNegativeY = -9;
@@ -94,16 +91,16 @@ public class ShowingPrefabs : MonoBehaviour
         //you cant get the room as first room
         if (!isShopRoom && i != 0)
         {
-            currentRoom = rooms[Random.Range(0, rooms.Length - 2)];
+            currentRoom = rooms[Random.Range(1, rooms.Length - 2)];
         }
         else
         {
             currentRoom = rooms[Random.Range(1, rooms.Length - 2)];
         }
 
-        if (currentRoom == rooms[0])
+        if (i == 5)
         {
-            isShopRoom = true;
+            currentRoom = rooms[0];
         }
         if (i == floorRooms - 1)
         {
