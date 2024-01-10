@@ -180,6 +180,8 @@ MonoBehaviour:
   SPEED: 5
   arrowPrefab: {fileID: 6325887549563639829, guid: 934ac33831c1ce64ba85f445764f02bc, type: 3}
   firePoint: {fileID: 8536014390528307515}
+  playerHitpoint: 0
+  bombPrefab: {fileID: 7807195891350963934, guid: 3f04244a43e2fa541a15effcca62fc54, type: 3}
 --- !u!114 &7424951131278752626
 MonoBehaviour:
   m_ObjectHideFlags: 0

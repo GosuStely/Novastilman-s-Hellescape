@@ -7,7 +7,11 @@ TagManager:
   - Mob
   - Wall
   - Arrow
+<<<<<<< HEAD
   - Item
+=======
+  - Bomb
+>>>>>>> 0a6728b1564728b3a4cf5424acccb14a54a3a946
   layers:
   - Default
   - TransparentFX

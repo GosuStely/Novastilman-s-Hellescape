@@ -19,13 +19,15 @@ public class PlayerMovement : PLAYERSTATS
     private string currentState;
 
     private bool isAttacking;
-
     public GameObject arrowPrefab;
     private float bulletSpeed = 10f;
     private float nextFire = 0.0f;
     private float fireDelay = 1f;
     public Transform firePoint; // firePoint 
     [SerializeField] private float playerHitpoint;
+
+    [SerializeField] private GameObject bombPrefab;
+
     private float playerDamage = 3f;
 
     private Arrow arrow;
@@ -63,6 +65,11 @@ public class PlayerMovement : PLAYERSTATS
             ChangeAnimationState(PLAYER_IDLE);
         }
 
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            var copy = Instantiate(bombPrefab, new Vector3(transform.position.x + 0.5f, transform.position.y -0.85f, transform.position.z), Quaternion.identity);
+            Destroy(copy, 2.5f);
+        }
+
         // shooting inputs: left, right, up and down arrow keys.
         float shootHorizontal = Input.GetAxis("ShootHorizontal");
         float shootVertical = Input.GetAxis("ShootVertical");
@@ -70,8 +77,21 @@ public class PlayerMovement : PLAYERSTATS
         if ((shootHorizontal != 0 || shootVertical != 0) && Time.time > nextFire && !isAttacking) {
             // checking if the player's velocity (both vertical and horizontal) is equal to 0.
             if (moveHorizontal == 0 && moveVertical == 0) {
+                if (shootVertical > 0 && shootHorizontal == 0) {
+                    firePoint.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                    animator.SetTrigger("AttackUp");
+                } else if (shootVertical < 0 && shootHorizontal == 0) {
+                    firePoint.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                    animator.SetTrigger("AttackDown");
+                } else if (shootVertical == 0 && shootHorizontal > 0) {
+                    firePoint.position = new Vector3(transform.position.x + 0.925f, transform.position.y - 0.64f, transform.position.z);
+                    animator.SetTrigger("Attack");
+                } else if (shootVertical == 0 && shootHorizontal < 0) {
+                    firePoint.position = new Vector3(transform.position.x - 0.925f, transform.position.y - 0.64f, transform.position.z);
+                    animator.SetTrigger("Attack");
+                } 
+
                 Shoot(shootHorizontal, shootVertical); // shoot!
-                animator.SetTrigger("Attack");
                 nextFire = Time.time + fireDelay;
             }
         }
