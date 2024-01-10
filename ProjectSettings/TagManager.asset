@@ -3,24 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Mob
-  - Wall
-  - Arrow
-<<<<<<< HEAD
-  - Item
-=======
-  - Bomb
->>>>>>> 0a6728b1564728b3a4cf5424acccb14a54a3a946
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - FloorLayer
+  - 
   - Water
   - UI
-  - Mob
-  - Player
+  - 
+  - 
   - 
   - 
   - 

@@ -33,8 +33,8 @@ public class PlayerMovement : PLAYERSTATS
     private Arrow arrow;
 
     // Animation states
-    const string PLAYER_IDLE = "PlayerIdle";
-    const string PLAYER_RUN = "PlayerRun";
+    const string PLAYER_IDLE = "Player_Idle";
+    const string PLAYER_RUN = "Player_Walk";
 
     void Start() {
         speed = SPEED;
@@ -45,6 +45,8 @@ public class PlayerMovement : PLAYERSTATS
         animator = GetComponent<Animator>();
         isAttacking = false;
         arrow = GetComponent<Arrow>();
+
+        bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = false;
     }
 
     // Update is called once per frame
@@ -67,7 +69,8 @@ public class PlayerMovement : PLAYERSTATS
 
         if (Input.GetKeyDown(KeyCode.Space)) {
             var copy = Instantiate(bombPrefab, new Vector3(transform.position.x + 0.5f, transform.position.y -0.85f, transform.position.z), Quaternion.identity);
-            Destroy(copy, 2.5f);
+            bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = true;
+            Destroy(copy, 2.20f);
         }
 
         // shooting inputs: left, right, up and down arrow keys.
@@ -78,16 +81,16 @@ public class PlayerMovement : PLAYERSTATS
             // checking if the player's velocity (both vertical and horizontal) is equal to 0.
             if (moveHorizontal == 0 && moveVertical == 0) {
                 if (shootVertical > 0 && shootHorizontal == 0) {
-                    firePoint.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                    firePoint.position = new Vector3(transform.position.x, transform.position.y + 0.7f, transform.position.z);
                     animator.SetTrigger("AttackUp");
                 } else if (shootVertical < 0 && shootHorizontal == 0) {
-                    firePoint.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                    firePoint.position = new Vector3(transform.position.x + 0.06f, transform.position.y - 2.76f, transform.position.z);
                     animator.SetTrigger("AttackDown");
                 } else if (shootVertical == 0 && shootHorizontal > 0) {
-                    firePoint.position = new Vector3(transform.position.x + 0.925f, transform.position.y - 0.64f, transform.position.z);
+                    firePoint.position = new Vector3(transform.position.x + 0.9f, transform.position.y - 0.78f, transform.position.z);
                     animator.SetTrigger("Attack");
                 } else if (shootVertical == 0 && shootHorizontal < 0) {
-                    firePoint.position = new Vector3(transform.position.x - 0.925f, transform.position.y - 0.64f, transform.position.z);
+                    firePoint.position = new Vector3(transform.position.x - 0.9f, transform.position.y - 0.78f, transform.position.z);
                     animator.SetTrigger("Attack");
                 } 
 

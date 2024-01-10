@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-    // public float lifeTime = 5f;
+    public float lifeTime = 5f;
 
-    // void Start()
-    // { 
-    //    StartCoroutine(DeathDelay());
-    // }
+    void Start()
+    { 
+       StartCoroutine(DeathDelay());
+    }
 
-    // IEnumerator DeathDelay() {
-    //     yield return new WaitForSeconds(lifeTime);
-    //     Destroy(gameObject);
-    // }
+    IEnumerator DeathDelay() {
+        yield return new WaitForSeconds(lifeTime);
+        Destroy(gameObject);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
