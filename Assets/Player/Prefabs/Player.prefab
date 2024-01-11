@@ -41,9 +41,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9104600036857016147}
   - component: {fileID: 6076946274181551428}
+  - component: {fileID: 6884794246931983935}
   - component: {fileID: 6414941390247017264}
   - component: {fileID: 2125954064212054708}
-  - component: {fileID: 5502583554837741078}
   - component: {fileID: 5703690233086661294}
   m_Layer: 0
   m_Name: Player
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1683051120, guid: c04abf0abbbec944b8736e2586e4162c, type: 3}
+  m_Sprite: {fileID: 1030947152, guid: 1640c8730556ec642977231968065e4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,6 +120,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6884794246931983935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6915327519452931800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 210f1c28cb325b045b9d86f5d975757b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 100
+  DMG: 3
+  ATTACKSPEED: 1
+  SPEED: 5
+  arrowPrefab: {fileID: 6325887549563639829, guid: 2805714e9c7b11d4b935d6262b508771, type: 3}
+  firePoint: {fileID: 4220896545146764629}
+  playerHitpoint: 0
+  bombPrefab: {fileID: 7807195891350963934, guid: a977276c9dfcadf4fbece95ce51ee14f, type: 3}
 --- !u!61 &6414941390247017264
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -192,26 +212,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5502583554837741078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6915327519452931800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd45843e5ad615c449958cd730a343aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 10
-  DMG: 1
-  ATTACKSPEED: 1
-  SPEED: 5
-  arrowPrefab: {fileID: 6325887549563639829, guid: d2f88995c3a194c42a297b360219e44c, type: 3}
-  firePoint: {fileID: 5727786803453168397, guid: d2f88995c3a194c42a297b360219e44c, type: 3}
-  playerHitpoint: 3
-  bombPrefab: {fileID: 7807195891350963934, guid: 2136cb9d2bf637448b7933f6174a2041, type: 3}
 --- !u!95 &5703690233086661294
 Animator:
   serializedVersion: 5
@@ -222,7 +222,7 @@ Animator:
   m_GameObject: {fileID: 6915327519452931800}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 009ed6f5ba9409841bd8523c74eabc12, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8017ef9ca9edaa2498afe2300861dee1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
