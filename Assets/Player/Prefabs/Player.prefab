@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 6414941390247017264}
   - component: {fileID: 2125954064212054708}
   - component: {fileID: 5703690233086661294}
-  - component: {fileID: 8638501203512272511}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -118,7 +117,7 @@ SpriteRenderer:
   m_Size: {x: 4, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &6884794246931983935
@@ -234,23 +233,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8638501203512272511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6915327519452931800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aca8cc6ca20121498d62f171536ea3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 5
-  DMG: 1
-  ATTACKSPEED: 1
-  SPEED: 3
-  arrowPrefab: {fileID: 6325887549563639829, guid: 934ac33831c1ce64ba85f445764f02bc, type: 3}
-  firePoint: {fileID: 4220896545146764629}
-  playerHitpoint: 5
-  bombPrefab: {fileID: 7807195891350963934, guid: 3f04244a43e2fa541a15effcca62fc54, type: 3}
