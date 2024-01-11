@@ -632,6 +632,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6414941390247017264, guid: 16b324587436cf041af2ebb995e3b661, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6915327519452931800, guid: 16b324587436cf041af2ebb995e3b661, type: 3}
       propertyPath: m_Name
       value: Player
@@ -797,6 +801,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 386349602632911722, guid: a30b4c5cc2933dc48998311d976620f1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1149930662}
+    - targetCorrespondingSourceObject: {fileID: 386349602632911722, guid: a30b4c5cc2933dc48998311d976620f1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1149930666}
   m_SourcePrefab: {fileID: 100100000, guid: a30b4c5cc2933dc48998311d976620f1, type: 3}
 --- !u!1 &1149930658 stripped
 GameObject:
@@ -822,6 +829,33 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   HP: 50
+--- !u!50 &1149930666
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149930658}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1000000
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
