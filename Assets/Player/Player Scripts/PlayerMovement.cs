@@ -78,6 +78,11 @@ public class PlayerMovement : PLAYERSTATS
         float shootVertical = Input.GetAxis("ShootVertical");
 
         if ((shootHorizontal != 0 || shootVertical != 0) && Time.time > nextFire && !isAttacking) {
+
+            // disable diagonal shooting
+            if (shootHorizontal != 0) shootVertical = 0;
+            else if (shootVertical != 0) shootHorizontal = 0;
+
             // checking if the player's velocity (both vertical and horizontal) is equal to 0.
             if (moveHorizontal == 0 && moveVertical == 0) {
                 if (shootVertical > 0 && shootHorizontal == 0) {
@@ -94,7 +99,7 @@ public class PlayerMovement : PLAYERSTATS
                     animator.SetTrigger("Attack");
                 } 
 
-                Shoot(shootHorizontal, shootVertical); // shoot!
+                Shoot(shootHorizontal, shootVertical); // shoot!                
                 nextFire = Time.time + fireDelay;
             }
         }
