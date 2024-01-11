@@ -3,12 +3,25 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< Updated upstream
   tags: []
+=======
+  tags:
+  - Mob
+  - Arrow
+  - Bomb
+  - Item
+  - Wall
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
+<<<<<<< Updated upstream
   - 
+=======
+  - Player
+>>>>>>> Stashed changes
   - Water
   - UI
   - 

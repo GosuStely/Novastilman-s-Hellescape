@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class StoneSlabMovement : MonoBehaviour
 {
-    public float speed;
     public float checkRadius;
     public float attackRadius;
     public float bulletForce = 20f;
@@ -15,7 +14,6 @@ public class StoneSlabMovement : MonoBehaviour
     public float startTimeBtwShots;
 
     public LayerMask whatIsPlayer;
-    //public Transform firePoint;
     public GameObject projectile;
 
     private Transform target;
@@ -24,6 +22,9 @@ public class StoneSlabMovement : MonoBehaviour
     public Vector3 direction;
 
     private bool isInAttackRange;
+    private bool runOutOfHP;
+
+    [SerializeField] private int HP = 3;
 
     private void Start()
     {
@@ -36,9 +37,17 @@ public class StoneSlabMovement : MonoBehaviour
     private void Update()
     {
         anim.SetBool("isAttacking", isInAttackRange);
+        anim.SetBool("isDead", runOutOfHP);
+
+        if (runOutOfHP)
+        {
+            // Trigger death animation and disable further actions
+            rb.velocity = Vector2.zero;
+            return;
+        }
 
         isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
-
+        
         direction = target.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         direction.Normalize();
@@ -70,6 +79,27 @@ public class StoneSlabMovement : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Arrow" && isInAttackRange)
+        {
+            Destroy(collision.gameObject);
+
+            HP -= 1;
+            if (HP <= 0)
+            {
+                runOutOfHP = true;
+                anim.SetTrigger("isDead");
+                StartCoroutine(DestroyAfterDeath());
+            }
+        }
+    }
+
+    IEnumerator DestroyAfterDeath() 
+    {
+        yield return new WaitForSeconds(0.9f);
+        Destroy(gameObject);
+    }
     
     //void Shoot()
     //{

@@ -16,8 +16,6 @@ public class Eye_Movement : MonoBehaviour
     public float startTimeBtwShots;
 
     public LayerMask whatIsPlayer;
-    public Transform firePoint;
-    public GameObject projectile;
 
     private Transform target;
     private Rigidbody2D rb;
@@ -27,6 +25,7 @@ public class Eye_Movement : MonoBehaviour
 
     private bool isInChaseRange;
     private bool isInAttackRange;
+    private bool runOutOfHP;
 
     [SerializeField] private int HP = 2;
 
@@ -42,7 +41,14 @@ public class Eye_Movement : MonoBehaviour
     {
         anim.SetBool("isChasing", isInChaseRange);
         anim.SetBool("isAttacking", isInAttackRange);
+        anim.SetBool("isDead", runOutOfHP);
 
+        if (runOutOfHP)
+        {
+            // Trigger death animation and disable further actions
+            rb.velocity = Vector2.zero;
+            return;
+        }
         isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRadius, whatIsPlayer);
         isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
 
@@ -69,7 +75,7 @@ public class Eye_Movement : MonoBehaviour
             rb.velocity = Vector2.zero;
             if (timeBtwShots <= 0)
             {
-                Shoot();
+                Attack();
                 timeBtwShots = startTimeBtwShots;
             }
             else
@@ -85,11 +91,9 @@ public class Eye_Movement : MonoBehaviour
         rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
     }
 
-    void Shoot()
+    void Attack()
     {
-        GameObject bullet = Instantiate(projectile, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -101,8 +105,17 @@ public class Eye_Movement : MonoBehaviour
             HP -= 1;
             if (HP <= 0)
             {
-                Destroy(gameObject);
+                speed = 0;
+                runOutOfHP = true;
+                anim.SetTrigger("isDead");
+                StartCoroutine(DestroyAfterDeath());
             }
         }
+    }
+
+    IEnumerator DestroyAfterDeath()
+    {
+        yield return new WaitForSeconds(0.9f);
+        Destroy(gameObject);
     }
 }

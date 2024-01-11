@@ -26,8 +26,10 @@ public class Golemn_Movement : MonoBehaviour
 
     private bool isInChaseRange;
     private bool isInAttackRange;
+    private bool runOutOfHP;
 
     [SerializeField] private int HP = 3;
+
 
     private void Start()
     {
@@ -41,6 +43,14 @@ public class Golemn_Movement : MonoBehaviour
     {
         anim.SetBool("isChasing", isInChaseRange);
         anim.SetBool("isAttacking", isInAttackRange);
+        anim.SetBool("isDead", runOutOfHP);
+
+        if (runOutOfHP)
+        {
+            // Trigger death animation and disable further actions
+            rb.velocity = Vector2.zero;
+            return;
+        }
 
         isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRadius, whatIsPlayer);
         isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
@@ -101,8 +111,17 @@ public class Golemn_Movement : MonoBehaviour
             HP -= 1;
             if (HP <= 0)
             {
-                Destroy(gameObject);
+                speed = 0;
+                runOutOfHP = true;
+                anim.SetTrigger("isDead");
+                StartCoroutine(DestroyAfterDeath());
             }
         }
+    }
+
+    IEnumerator DestroyAfterDeath()
+    {
+        yield return new WaitForSeconds(0.9f);
+        Destroy(gameObject);
     }
 }
