@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 
-public class Eye_Movement : MonoBehaviour
+public class DemonMovement : MonoBehaviour
 {
     public float speed;
     public float checkRadius;
