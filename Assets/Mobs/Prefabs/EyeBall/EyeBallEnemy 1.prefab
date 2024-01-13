@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1698499016439212660}
   - component: {fileID: 4391180579771111374}
   - component: {fileID: 5544210081685805137}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: EyeBallEnemy 1
   m_TagString: Mob
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ MonoBehaviour:
   startTimeBtwShots: 1
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
   firePoint: {fileID: 0}
   projectile: {fileID: 0}
   direction: {x: 0, y: 0, z: 0}

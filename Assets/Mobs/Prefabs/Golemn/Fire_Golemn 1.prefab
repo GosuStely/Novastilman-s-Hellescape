@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3073691938303305577}
   - component: {fileID: 5336987489318939491}
   - component: {fileID: 6532932678006255675}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Fire_Golemn 1
   m_TagString: Mob
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ MonoBehaviour:
   startTimeBtwShots: 1.5
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
   projectile: {fileID: 5950324280885363593, guid: 73fb118c2c0c3914c8961c1879cc925b, type: 3}
   direction: {x: 0, y: 0, z: 0}
   HP: 3

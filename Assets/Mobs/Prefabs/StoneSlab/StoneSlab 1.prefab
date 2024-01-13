@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8839751270257492682}
   - component: {fileID: 7837396573662948646}
   - component: {fileID: 4855970444647760400}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: StoneSlab 1
   m_TagString: Mob
   m_Icon: {fileID: 0}
@@ -202,6 +202,6 @@ MonoBehaviour:
   startTimeBtwShots: 0.6
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
   projectile: {fileID: 1353025855593090420, guid: d2b178cae3af8734ab7f055737f9e62b, type: 3}
   direction: {x: 0, y: 0, z: 0}

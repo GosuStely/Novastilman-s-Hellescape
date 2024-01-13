@@ -577,7 +577,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1104495635759352287, guid: 16b324587436cf041af2ebb995e3b661, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2125954064212054708, guid: 16b324587436cf041af2ebb995e3b661, type: 3}
       propertyPath: m_Simulated
@@ -597,7 +597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6915327519452931800, guid: 16b324587436cf041af2ebb995e3b661, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9104600036857016147, guid: 16b324587436cf041af2ebb995e3b661, type: 3}
       propertyPath: m_LocalPosition.x
@@ -711,6 +711,10 @@ PrefabInstance:
     - target: {fileID: 5135231627535019049, guid: a7f8fd1e9c0955e4eadbd11edbc08271, type: 3}
       propertyPath: startTimeBtwShots
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135231627535019049, guid: a7f8fd1e9c0955e4eadbd11edbc08271, type: 3}
+      propertyPath: whatIsPlayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
