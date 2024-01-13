@@ -20,6 +20,8 @@ public class PlayerMovement : PLAYERSTATS
 
     private bool isAttacking;
     public GameObject arrowPrefab;
+
+    private SpriteRenderer playerAttackRedness;
     private float bulletSpeed = 10f;
     private float nextFire = 0.0f;
     private float fireDelay = 1f;
@@ -36,6 +38,8 @@ public class PlayerMovement : PLAYERSTATS
     const string PLAYER_IDLE = "Player_Idle";
     const string PLAYER_RUN = "Player_Walk";
 
+    Vector2 movement;
+
     void Start() {
         speed = SPEED;
         fireDelay = ATTACKSPEED;
@@ -43,10 +47,15 @@ public class PlayerMovement : PLAYERSTATS
         playerDamage = DMG;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        playerAttackRedness = GetComponent<SpriteRenderer>();
         isAttacking = false;
         arrow = GetComponent<Arrow>();
 
         bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+
+        if (gameObject == null) {
+            Debug.LogError("Plaeyr is null!!!");
+        }
     }
 
     // Update is called once per frame
@@ -112,7 +121,7 @@ public class PlayerMovement : PLAYERSTATS
         }
 
         // Calculate movement direction
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        movement = new Vector2(moveHorizontal, moveVertical);
 
         // Apply movement to the rigidbody
         rb.velocity = movement * speed;
@@ -154,10 +163,14 @@ public class PlayerMovement : PLAYERSTATS
     public void TakeDamage(int amount)
     {
         playerHitpoint -= amount;
+        animator.SetTrigger("PlayerHit");
         if (playerHitpoint <= 0)
         {
             //Add Death animation
-            Destroy(gameObject);
+            animator.SetTrigger("PlayerDeath");
+            movement.x = 0;
+            movement.y = 0;
+            Destroy(gameObject, 0.5f);
         }
     }
 
