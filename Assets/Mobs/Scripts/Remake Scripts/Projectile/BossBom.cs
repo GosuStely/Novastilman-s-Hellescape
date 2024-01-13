@@ -4,21 +4,8 @@ using UnityEngine;
 
 public class BossBom : MonoBehaviour
 {
-    private Transform player;
-
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-    }
-
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
-        
         if (other.CompareTag("Player"))
         {
             var healthComponent = other.GetComponent<PlayerMovement>();
@@ -26,7 +13,17 @@ public class BossBom : MonoBehaviour
             {
                 healthComponent.TakeDamage(2);
             }
+
+            // Destroy the bomb after dealing damage
+            //DestroyAfterTouch();
         }
     }
 
+    /*IEnumerator DestroyAfterTouch()
+    {
+        yield return new WaitForSeconds(0.3f);
+        Destroy(gameObject);
+    }*/
+
 }
+

@@ -18,6 +18,9 @@ public class Boss_Eye : MonoBehaviour
     private bool isInAttackRange;
     private bool runOutOfHP;
 
+    public GameObject projectile;
+    public float timeBtwShots;
+    public float startTimeBtwShots;
 
     [SerializeField] private int HP = 50;
 
@@ -26,6 +29,7 @@ public class Boss_Eye : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
+        timeBtwShots = startTimeBtwShots;
 
         bombSpawner = GetComponentInChildren<BossBomb_Spawner>();
         // Start the boss attack cycle coroutine
@@ -67,6 +71,20 @@ public class Boss_Eye : MonoBehaviour
     private void FixedUpdate()
     {
         isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
+        if (isInAttackRange)
+        {
+            rb.velocity = Vector2.zero;
+            if (timeBtwShots <= 0)
+            {
+                //Shoot();
+                Instantiate(projectile, transform.position, Quaternion.identity);
+                timeBtwShots = startTimeBtwShots;
+            }
+            else
+            {
+                timeBtwShots -= Time.deltaTime;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -80,6 +98,7 @@ public class Boss_Eye : MonoBehaviour
             {
                 runOutOfHP = true;
                 anim.SetTrigger("isDead");
+
                 StartCoroutine(DestroyAfterDeath());
             }
         }
@@ -87,7 +106,18 @@ public class Boss_Eye : MonoBehaviour
 
     IEnumerator DestroyAfterDeath()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
+        GameObject spawingBombs = GameObject.Find("Bomb_Spawner");
+        GameObject remainingBombs = GameObject.Find("BossBomb(Clone)");
+        
+
+        // Check if the BombSpawner object is found
+        if (spawingBombs != null )
+        {
+            // Destroy the BombSpawner object
+            Destroy(remainingBombs);
+            Destroy(spawingBombs);
+        }
         Destroy(gameObject);
     }
 }
