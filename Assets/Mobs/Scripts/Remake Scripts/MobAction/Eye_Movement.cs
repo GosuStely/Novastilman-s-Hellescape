@@ -27,6 +27,7 @@ public class Eye_Movement : MonoBehaviour
 
     private bool isInChaseRange;
     private bool isInAttackRange;
+    private bool isRunOutOfHP;
 
     [SerializeField] private int HP = 2;
 
@@ -42,6 +43,7 @@ public class Eye_Movement : MonoBehaviour
     {
         anim.SetBool("isChasing", isInChaseRange);
         anim.SetBool("isAttacking", isInAttackRange);
+        anim.SetBool("isDead", isRunOutOfHP);
 
         isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRadius, whatIsPlayer);
         isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
@@ -69,7 +71,7 @@ public class Eye_Movement : MonoBehaviour
             rb.velocity = Vector2.zero;
             if (timeBtwShots <= 0)
             {
-                Shoot();
+                Attack();
                 timeBtwShots = startTimeBtwShots;
             }
             else
@@ -85,11 +87,9 @@ public class Eye_Movement : MonoBehaviour
         rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
     }
 
-    void Shoot()
+    void Attack()
     {
-        GameObject bullet = Instantiate(projectile, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -101,8 +101,17 @@ public class Eye_Movement : MonoBehaviour
             HP -= 1;
             if (HP <= 0)
             {
-                Destroy(gameObject);
+                isRunOutOfHP = true;
+                anim.SetTrigger("isDead");
+
+                StartCoroutine(DestroyAfterDeath());
             }
         }
+    }
+
+    IEnumerator DestroyAfterDeath()
+    {
+        yield return new WaitForSeconds(0.7f);
+        Destroy(gameObject);
     }
 }

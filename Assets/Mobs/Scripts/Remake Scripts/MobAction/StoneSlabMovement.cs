@@ -24,6 +24,9 @@ public class StoneSlabMovement : MonoBehaviour
     public Vector3 direction;
 
     private bool isInAttackRange;
+    private bool isRunOutOfHP;
+
+    [SerializeField] private int HP = 2;
 
     private void Start()
     {
@@ -36,6 +39,7 @@ public class StoneSlabMovement : MonoBehaviour
     private void Update()
     {
         anim.SetBool("isAttacking", isInAttackRange);
+        anim.SetBool("isDead", isRunOutOfHP);
 
         isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
 
@@ -52,7 +56,7 @@ public class StoneSlabMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+
         if (isInAttackRange)
         {
             rb.velocity = Vector2.zero;
@@ -67,10 +71,32 @@ public class StoneSlabMovement : MonoBehaviour
                 timeBtwShots -= Time.deltaTime;
             }
         }
+        
 
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Arrow" && isInAttackRange)
+        {
+            Destroy(collision.gameObject);
+
+            HP -= 1;
+            if (HP <= 0)
+            {
+                isRunOutOfHP = true;
+                anim.SetTrigger("isDead");
+
+                StartCoroutine(DestroyAfterDeath());
+            }
+        }
+    }
+
+    IEnumerator DestroyAfterDeath()
+    { 
+        yield return new WaitForSeconds(0.7f);
+        Destroy(gameObject);
+    }
     //void Shoot()
     //{
     //  GameObject bullet = Instantiate(projectile, firePoint.position, firePoint.rotation);
