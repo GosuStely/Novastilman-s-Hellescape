@@ -14,7 +14,6 @@ public class Eye_Movement : MonoBehaviour
 
     public bool shouldRotate;
 
-
     public LayerMask whatIsPlayer;
 
     private Transform target;

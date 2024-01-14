@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5809804963372277519}
   - component: {fileID: 7560614314452645611}
   m_Layer: 0
-  m_Name: Demon
+  m_Name: WobblyDemon
   m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
