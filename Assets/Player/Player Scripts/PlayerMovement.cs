@@ -164,14 +164,15 @@ public class PlayerMovement : PLAYERSTATS
     {
         playerHitpoint -= amount;
         animator.SetTrigger("PlayerHit");
+        // stunning effect for a player
         if (playerHitpoint <= 0)
         {
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
             //Add Death animation
             animator.SetTrigger("PlayerDeath");
-            movement.x = 0;
-            movement.y = 0;
-            Destroy(gameObject, 0.5f);
+            if (gameObject != null) {
+                Destroy(gameObject, 0.5f);
+            }
         }
     }
-
 }
