@@ -9,15 +9,13 @@ public class Eye_Movement : MonoBehaviour
     public float checkRadius;
     public float attackRadius;
     public float bulletForce = 20f;
+    public float attackCoolDown = 0.5f;
+    public float lastAttackTime;
 
     public bool shouldRotate;
 
-    public float timeBtwShots;
-    public float startTimeBtwShots;
 
     public LayerMask whatIsPlayer;
-    public Transform firePoint;
-    public GameObject projectile;
 
     private Transform target;
     private Rigidbody2D rb;
@@ -27,21 +25,22 @@ public class Eye_Movement : MonoBehaviour
 
     private bool isInChaseRange;
     private bool isInAttackRange;
+    private bool isRunOutOfHP;
 
-    [SerializeField] private int HP = 2;
+    [SerializeField] private int HP = 1;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
-        timeBtwShots = startTimeBtwShots;
     }
 
     private void Update()
     {
         anim.SetBool("isChasing", isInChaseRange);
         anim.SetBool("isAttacking", isInAttackRange);
+        anim.SetBool("isDead", isRunOutOfHP);
 
         isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRadius, whatIsPlayer);
         isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
@@ -66,16 +65,7 @@ public class Eye_Movement : MonoBehaviour
         }
         if (isInAttackRange)
         {
-            rb.velocity = Vector2.zero;
-            if (timeBtwShots <= 0)
-            {
-                Shoot();
-                timeBtwShots = startTimeBtwShots;
-            }
-            else
-            {
-                timeBtwShots -= Time.deltaTime;
-            }
+            Attack();
         }
 
     }
@@ -85,11 +75,24 @@ public class Eye_Movement : MonoBehaviour
         rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
     }
 
-    void Shoot()
+    void Attack()
     {
-        GameObject bullet = Instantiate(projectile, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        if (Time.time - lastAttackTime > attackCoolDown)
+        {
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRadius, whatIsPlayer);
+            foreach (Collider2D collider in colliders)
+            {
+                if (collider.CompareTag("Player"))
+                {
+                    var healthComponent = collider.GetComponent<PlayerMovement>();
+                    if (healthComponent != null)
+                    {
+                        healthComponent.TakeDamage(1);
+                        lastAttackTime = Time.time;
+                    }
+                }
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -101,8 +104,17 @@ public class Eye_Movement : MonoBehaviour
             HP -= 1;
             if (HP <= 0)
             {
-                Destroy(gameObject);
+                isRunOutOfHP = true;
+                anim.SetTrigger("isDead");
+
+                StartCoroutine(DestroyAfterDeath());
             }
         }
+    }
+
+    IEnumerator DestroyAfterDeath()
+    {
+        yield return new WaitForSeconds(0.7f);
+        Destroy(gameObject);
     }
 }
