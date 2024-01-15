@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 210f1c28cb325b045b9d86f5d975757b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  HP: 100000
   DMG: 3
   ATTACKSPEED: 1
   SPEED: 5
@@ -140,6 +140,8 @@ MonoBehaviour:
   firePoint: {fileID: 4220896545146764629}
   playerHitpoint: 0
   bombPrefab: {fileID: 7807195891350963934, guid: a977276c9dfcadf4fbece95ce51ee14f, type: 3}
+  newMaterial: {fileID: 2100000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!61 &6414941390247017264
 BoxCollider2D:
   m_ObjectHideFlags: 0

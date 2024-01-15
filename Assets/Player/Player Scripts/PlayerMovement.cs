@@ -19,9 +19,8 @@ public class PlayerMovement : PLAYERSTATS
     private string currentState;
 
     private bool isAttacking;
+    private bool waiting;
     public GameObject arrowPrefab;
-
-    private SpriteRenderer playerAttackRedness;
     private float bulletSpeed = 10f;
     private float nextFire = 0.0f;
     private float fireDelay = 1f;
@@ -29,6 +28,10 @@ public class PlayerMovement : PLAYERSTATS
     [SerializeField] private float playerHitpoint;
 
     [SerializeField] private GameObject bombPrefab;
+
+    private SpriteRenderer sr;
+    [SerializeField] private Material newMaterial;
+    [SerializeField] private Material defaultMaterial;
 
     private float playerDamage = 3f;
 
@@ -39,6 +42,8 @@ public class PlayerMovement : PLAYERSTATS
     const string PLAYER_RUN = "Player_Walk";
 
     Vector2 movement;
+    float moveHorizontal;
+    float moveVertical;
 
     void Start() {
         speed = SPEED;
@@ -47,9 +52,9 @@ public class PlayerMovement : PLAYERSTATS
         playerDamage = DMG;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        playerAttackRedness = GetComponent<SpriteRenderer>();
         isAttacking = false;
         arrow = GetComponent<Arrow>();
+        sr = GetComponent<SpriteRenderer>();
 
         bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = false;
 
@@ -62,10 +67,11 @@ public class PlayerMovement : PLAYERSTATS
     void Update()
     {
         // Capture input axes
-        float moveHorizontal = 0;
-        float moveVertical = 0;
+        moveHorizontal = 0;
+        moveVertical = 0;
 
         // Checking input
+        
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) {
             moveHorizontal = Input.GetAxis("Horizontal");
             ChangeAnimationState(PLAYER_RUN);
@@ -81,6 +87,8 @@ public class PlayerMovement : PLAYERSTATS
             bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = true;
             Destroy(copy, 2.20f);
         }
+        
+        
 
         // shooting inputs: left, right, up and down arrow keys.
         float shootHorizontal = Input.GetAxis("ShootHorizontal");
@@ -160,10 +168,28 @@ public class PlayerMovement : PLAYERSTATS
         );
     }
 
+    void Stop(float duration) {
+        if (waiting) {
+            return;
+        }
+        speed = 0f;
+        sr.material = newMaterial;
+        StartCoroutine(Wait(duration));
+    }
+
+    IEnumerator Wait(float duration) {
+        waiting = true;
+        yield return new WaitForSecondsRealtime(duration);
+        speed = SPEED;
+        sr.material = defaultMaterial;
+        waiting = false;
+    }
+
     public void TakeDamage(int amount)
     {
         playerHitpoint -= amount;
-        animator.SetTrigger("PlayerHit");
+        Stop(0.1f);
+        // animator.SetTrigger("PlayerHit");
         // stunning effect for a player
         if (playerHitpoint <= 0)
         {
