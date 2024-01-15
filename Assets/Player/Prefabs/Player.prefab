@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 9104600036857016147}
   - component: {fileID: 6076946274181551428}
   - component: {fileID: 6884794246931983935}
+  - component: {fileID: 3033655361401742505}
   - component: {fileID: 6414941390247017264}
   - component: {fileID: 2125954064212054708}
   - component: {fileID: 5703690233086661294}
@@ -132,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 210f1c28cb325b045b9d86f5d975757b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100000
+  HP: 5
   DMG: 3
   ATTACKSPEED: 1
   SPEED: 5
@@ -142,6 +143,27 @@ MonoBehaviour:
   bombPrefab: {fileID: 7807195891350963934, guid: a977276c9dfcadf4fbece95ce51ee14f, type: 3}
   newMaterial: {fileID: 2100000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
   defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &3033655361401742505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6915327519452931800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb940b8050fa00543890eb9c3f661cd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfHearts: 5
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHeart: {fileID: 21300000, guid: f9102708c9a9c064d98aa43ae73a0f16, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 63041c92f8af5c141be15d323468d576, type: 3}
 --- !u!61 &6414941390247017264
 BoxCollider2D:
   m_ObjectHideFlags: 0

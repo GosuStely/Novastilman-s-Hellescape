@@ -25,7 +25,7 @@ public class PlayerMovement : PLAYERSTATS
     private float nextFire = 0.0f;
     private float fireDelay = 1f;
     public Transform firePoint; // firePoint 
-    [SerializeField] private float playerHitpoint;
+    public float playerHitpoint;
 
     [SerializeField] private GameObject bombPrefab;
 
