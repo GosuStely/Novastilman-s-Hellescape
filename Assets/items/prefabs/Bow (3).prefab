@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8824339333069128434}
   m_Layer: 0
   m_Name: Bow (3)
-  m_TagString: Untagged
+  m_TagString: Golden_Bow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

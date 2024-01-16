@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8267198627493970965}
   m_Layer: 0
   m_Name: Armor tier one
-  m_TagString: Untagged
+  m_TagString: Broze_Chestplate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

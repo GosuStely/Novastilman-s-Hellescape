@@ -28,7 +28,7 @@ public class Golemn_Movement : MonoBehaviour
     private bool isInAttackRange;
     private bool isRunOutOfHP;
 
-    [SerializeField] private int HP = 3;
+    [SerializeField] private int HP = 3; 
 
     private void Start()
     {

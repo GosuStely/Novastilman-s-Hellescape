@@ -5,7 +5,6 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     public float lifeTime = 5f;
-    [SerializeField] private GameObject arrowEffect;
 
     void Start()
     { 
@@ -23,7 +22,6 @@ public class Arrow : MonoBehaviour
         {
             // Destroy the bullet when it touches the player or a wall
             Destroy(gameObject);
-            Instantiate(arrowEffect, transform.position, Quaternion.identity);
         }
     }
 

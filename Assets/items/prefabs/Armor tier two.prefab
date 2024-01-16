@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8167842915422950946}
   m_Layer: 0
   m_Name: Armor tier two
-  m_TagString: Untagged
+  m_TagString: Diamond_Chestplate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

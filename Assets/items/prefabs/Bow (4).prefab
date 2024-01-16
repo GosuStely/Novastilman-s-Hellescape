@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3637873845103174500}
   m_Layer: 0
   m_Name: Bow (4)
-  m_TagString: Untagged
+  m_TagString: Ruby_Bow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

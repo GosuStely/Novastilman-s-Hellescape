@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5509265969316209388}
   m_Layer: 0
   m_Name: Boots (19)
-  m_TagString: Untagged
+  m_TagString: Ruby_Shoes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

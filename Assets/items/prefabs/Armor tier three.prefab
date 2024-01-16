@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2528149866096897175}
   m_Layer: 0
   m_Name: Armor tier three
-  m_TagString: Untagged
+  m_TagString: Sapphire_Chestplate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

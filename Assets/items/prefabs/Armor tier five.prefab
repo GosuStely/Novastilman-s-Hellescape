@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2150615551254134746}
   m_Layer: 0
   m_Name: Armor tier five
-  m_TagString: Untagged
+  m_TagString: Ruby_Chestplate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

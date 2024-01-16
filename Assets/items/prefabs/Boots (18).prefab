@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2861600358558637211}
   m_Layer: 0
   m_Name: Boots (18)
-  m_TagString: Untagged
+  m_TagString: Gold_Shoes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

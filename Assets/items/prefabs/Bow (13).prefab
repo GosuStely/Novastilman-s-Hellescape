@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7552921585368431533}
   m_Layer: 0
   m_Name: Bow (13)
-  m_TagString: Untagged
+  m_TagString: SuperFire_Bow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
