@@ -1877,7 +1877,8 @@ PrefabInstance:
       propertyPath: spawnPoints.Array.size
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8191025430043961163, guid: 6a6bcaaeb1f37ad4b87a101c285ad624, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1504147481668864696, guid: 6a6bcaaeb1f37ad4b87a101c285ad624, type: 3}
     - {fileID: 3081418542742153531, guid: 6a6bcaaeb1f37ad4b87a101c285ad624, type: 3}
