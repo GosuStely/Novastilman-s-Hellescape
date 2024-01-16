@@ -9,7 +9,7 @@ public class ItemPickup : MonoBehaviour
         Debug.Log("Powerup script triggered function 2");
         if (other.tag == "Player")
         {
-            Destroy(gameObject);
+            Destroy(gameObject); // collecting the item
             
         }
     }
