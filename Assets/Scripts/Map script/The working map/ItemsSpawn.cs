@@ -7,6 +7,8 @@ public class RandomSpawnManager : MonoBehaviour
     public GameObject[] prefabList; // The prefab you want to spawn
     public Transform[] spawnPoints; // List of potential spawn points
 
+    public GameObject prefabToSpawn;
+
     void Start()
     {
         for (int i = 0; i < spawnPoints.Length; i++)
@@ -17,7 +19,7 @@ public class RandomSpawnManager : MonoBehaviour
 
     void SpawnPrefabAtRandomLocation(Transform spawnPoint)
     {
-        GameObject prefabToSpawn = prefabList[Random.Range(0, prefabList.Length - 1)];
+        prefabToSpawn = prefabList[Random.Range(0, prefabList.Length - 1)];
         if (prefabToSpawn == null)
         {
             Debug.LogError("Prefab to spawn is not assigned.");

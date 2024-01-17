@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -9190661194615232615}
   m_Layer: 0
   m_Name: Shield (36)
-  m_TagString: Untagged
+  m_TagString: Angel_Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f71cfe46dedc72419700eacfc9cd74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 2428316397655042072, guid: a68c85a298587944d9918fb691ad0dcc, type: 3}

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5392176983419860528}
   m_Layer: 0
   m_Name: Helmet (25)
-  m_TagString: Untagged
+  m_TagString: Bronze_Helmet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f71cfe46dedc72419700eacfc9cd74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 4277434867030537788, guid: 9029fe348f6a1464a8859a6dd5639bc3, type: 3}

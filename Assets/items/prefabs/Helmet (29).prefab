@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3786512292562824059}
   m_Layer: 0
   m_Name: Helmet (29)
-  m_TagString: Untagged
+  m_TagString: Ruby_Helmet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f71cfe46dedc72419700eacfc9cd74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 1931975311855471297, guid: a310fee1995c38746909c542a0fb2571, type: 3}

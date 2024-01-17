@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2796647644679190198}
   m_Layer: 0
   m_Name: Necklece (52)
-  m_TagString: Untagged
+  m_TagString: Archaic_Necklece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f71cfe46dedc72419700eacfc9cd74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 7060138298236628672, guid: 318bd028bf284e74ab89b11523c99230, type: 3}

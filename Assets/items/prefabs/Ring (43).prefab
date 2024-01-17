@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7011574694457585193}
   m_Layer: 0
   m_Name: Ring (43)
-  m_TagString: Untagged
+  m_TagString: Demon_Ring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f71cfe46dedc72419700eacfc9cd74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 7601277126071808798, guid: 38c4b6c805adcde4abcfe1acc61e9ea2, type: 3}

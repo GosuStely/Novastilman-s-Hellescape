@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6870999199585029307}
   m_Layer: 0
   m_Name: Helmet (27)
-  m_TagString: Untagged
+  m_TagString: Sapphire_Helmet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f71cfe46dedc72419700eacfc9cd74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 5354777626989866709, guid: b2e5188bef482a744b7bd099d7291dd2, type: 3}

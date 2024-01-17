@@ -9,6 +9,57 @@ TagManager:
   - Arrow
   - Bomb
   - Mob
+  - Ruby_Chestplate
+  - Gold_Chestplate
+  - Broze_Chestplate
+  - Sapphire_Chestplate
+  - Diamond_Chestplate
+  - Broze_Shoes
+  - Gold_Shoes
+  - Ruby_Shoes
+  - Diamond_Shoes
+  - Sapphire_Shoes
+  - Leaf_Bow
+  - Platinum_Bow
+  - Obsidian_Bow
+  - Golden_Bow
+  - Ruby_Bow
+  - Archaic_Bow
+  - Emerald_Bow
+  - Hero_Bow
+  - Ice_Bow
+  - Fire_Bow
+  - Elf_Bow
+  - Mushroom_Bow
+  - SuperIce_Bow
+  - SuperFire_Bow
+  - SuperMushroom_Bow
+  - Bronze_Gloves
+  - Gold_Gloves
+  - Ruby_Gloves
+  - Sapphire_Gloves
+  - Diamond_Gloves
+  - Bronze_Helmet
+  - Diamond_Helmet
+  - Gold_Helmet
+  - Ruby_Helmet
+  - Sapphire_Helmet
+  - Ruby_Necklece
+  - Gold_Necklece
+  - Obsidian_Necklece
+  - Archaic_Necklece
+  - Elf_Necklece
+  - Demon_Ring
+  - Obsidian_Ring
+  - Fire_Ring
+  - Lucifer_Ring
+  - Elf_Ring
+  - Leaf_Shield
+  - Angel_Shield
+  - Demon_Shield
+  - Fire_Shield
+  - Ice_Shield
+  - Store
   layers:
   - Default
   - TransparentFX

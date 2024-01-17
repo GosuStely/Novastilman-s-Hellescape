@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4044193884703566344}
   m_Layer: 0
   m_Name: Gloves (20)
-  m_TagString: Untagged
+  m_TagString: Bronze_Gloves
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f71cfe46dedc72419700eacfc9cd74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 4099219643369369973, guid: fd778c760c5ae7b4d86965ecd38e1ab8, type: 3}

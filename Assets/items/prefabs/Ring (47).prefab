@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3362818260065569836}
   m_Layer: 0
   m_Name: Ring (47)
-  m_TagString: Untagged
+  m_TagString: Elf_Ring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f71cfe46dedc72419700eacfc9cd74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 4157625697876969205, guid: 710d66584b787234e8496aacb49de376, type: 3}

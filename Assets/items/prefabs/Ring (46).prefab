@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8662080469548230299}
   m_Layer: 0
   m_Name: Ring (46)
-  m_TagString: Untagged
+  m_TagString: Lucifer_Ring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f71cfe46dedc72419700eacfc9cd74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 9030833155743854895, guid: d162c156974b2c244834c527ed391570, type: 3}
