@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5676813834640402592}
   - component: {fileID: 7941079625982244867}
   m_Layer: 0
-  m_Name: BloodDrop
+  m_Name: DONTDragThisToMap_BossBloodDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

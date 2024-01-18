@@ -43,15 +43,15 @@ public class Rocky : MonoBehaviour
             rb.velocity = new Vector2 (-speed, 0);
         }
 
-        if (Vector2.Distance(transform.position, currentPoint.position) < 1f && currentPoint == pointB.transform)
-        {
-            Flip();
-            currentPoint = pointA.transform;
-        }
-        if (Vector2.Distance(transform.position, currentPoint.position) < 1f && currentPoint == pointA.transform)
+        if (Vector2.Distance(transform.position, currentPoint.position) < 1.5f && currentPoint == pointA.transform)
         {
             Flip();
             currentPoint = pointB.transform;
+        }
+        if (Vector2.Distance(transform.position, currentPoint.position) < 1.5f && currentPoint == pointB.transform)
+        {
+            Flip();
+            currentPoint = pointA.transform;
         }
     }
 

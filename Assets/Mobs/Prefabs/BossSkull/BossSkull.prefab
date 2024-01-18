@@ -168,7 +168,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   speed: 8
-  HP: 3
+  HP: 10
 --- !u!114 &5002862432600785975
 MonoBehaviour:
   m_ObjectHideFlags: 0

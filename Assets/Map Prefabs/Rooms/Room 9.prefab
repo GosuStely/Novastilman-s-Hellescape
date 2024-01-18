@@ -9495,6 +9495,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2650222335166878115, guid: 32dcefeacaad4c241a0f52bd39c44360, type: 3}
   m_PrefabInstance: {fileID: 3226397960614224237}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &3224148402477548398 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 33792639789031939, guid: 32dcefeacaad4c241a0f52bd39c44360, type: 3}
+  m_PrefabInstance: {fileID: 3226397960614224237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7769095999312354825 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5122607631287943012, guid: 32dcefeacaad4c241a0f52bd39c44360, type: 3}
+  m_PrefabInstance: {fileID: 3226397960614224237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8197270705027623544 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6702756609658424085, guid: 32dcefeacaad4c241a0f52bd39c44360, type: 3}
+  m_PrefabInstance: {fileID: 3226397960614224237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4683484685116823278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9565,6 +9580,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1257048543124265044}
     m_Modifications:
+    - target: {fileID: 1712483078735118877, guid: a36c4c727502b5841be8e82c148e3707, type: 3}
+      propertyPath: points.Array.data[0]
+      value: 
+      objectReference: {fileID: 8197270705027623544}
+    - target: {fileID: 1712483078735118877, guid: a36c4c727502b5841be8e82c148e3707, type: 3}
+      propertyPath: points.Array.data[1]
+      value: 
+      objectReference: {fileID: 3224148402477548398}
+    - target: {fileID: 1712483078735118877, guid: a36c4c727502b5841be8e82c148e3707, type: 3}
+      propertyPath: points.Array.data[2]
+      value: 
+      objectReference: {fileID: 7769095999312354825}
     - target: {fileID: 3124206261070779676, guid: a36c4c727502b5841be8e82c148e3707, type: 3}
       propertyPath: m_Name
       value: BossSkull
@@ -9575,11 +9602,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5002862432600785975, guid: a36c4c727502b5841be8e82c148e3707, type: 3}
       propertyPath: fireRate
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5002862432600785975, guid: a36c4c727502b5841be8e82c148e3707, type: 3}
       propertyPath: bulletsAmount
-      value: 18
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6509102467031994389, guid: a36c4c727502b5841be8e82c148e3707, type: 3}
       propertyPath: m_LocalPosition.x

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3135767501581553559}
   - component: {fileID: 7135965989109450460}
   m_Layer: 0
-  m_Name: BossBomb
+  m_Name: DONTDragThisToMap_BossEyeBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

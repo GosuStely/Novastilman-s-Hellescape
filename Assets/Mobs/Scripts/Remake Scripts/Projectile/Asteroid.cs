@@ -25,18 +25,18 @@ public class Asteroid : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the trigger collider belongs to the player or a wall
-        if (other.CompareTag("Player") || other.CompareTag("Wall"))
+        if (other.CompareTag("Player") || other.CompareTag("Wall") || other.CompareTag("Rock"))
         {
             // Destroy the bullet when it touches the player or a wall
             Destroy(gameObject);
         }
-        //if (other.CompareTag("Player"))
-        //{
-        //var healthComponent = other.GetComponent<PlayerCollisionWithMob>();
-        //if (healthComponent != null)
-        //{
-        //healthComponent.TakeDamage(1);
-        //}
-        //}
+        if (other.CompareTag("Player"))
+        {
+        var healthComponent = other.GetComponent<PlayerMovement>();
+        if (healthComponent != null)
+        {
+        healthComponent.TakeDamage(1);
+        }
+        }
     }
 }

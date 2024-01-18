@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6308658457413286584}
   m_Layer: 0
-  m_Name: Rollingstuff
+  m_Name: UseThisRock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,7 +118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4842479445812168526, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9520898
+      value: 12.98
       objectReference: {fileID: 0}
     - target: {fileID: 4842479445812168526, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
       propertyPath: m_LocalPosition.y

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5676813834640402592}
   - component: {fileID: 3360497270743131028}
   m_Layer: 0
-  m_Name: BossSkulBullet
+  m_Name: DONTDragToMap_BossSkullProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
