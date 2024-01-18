@@ -781,6 +781,7 @@ GameObject:
   - component: {fileID: 585069127}
   - component: {fileID: 585069130}
   - component: {fileID: 585069131}
+  - component: {fileID: 585069132}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -884,38 +885,38 @@ MonoBehaviour:
   - {fileID: 1689175459837697240, guid: 9673f2d1593247d4aa5c45aeee1b5701, type: 3}
   - {fileID: 1689175459837697240, guid: 8615e20e2f6ba0348aec9a0e265074b9, type: 3}
   - {fileID: 1689175459837697240, guid: 14d7b97b2f9860d4098acae588c07bf3, type: 3}
-  - {fileID: 1689175459837697240, guid: 89b26d250472e1f4dbb30ea9bf24ebc6, type: 3}
+  - {fileID: 1689175459837697240, guid: 6066949f38c6b28418babe3eda3c3f71, type: 3}
   - {fileID: 1689175459837697240, guid: ddb05acff1ad61f4ca8bc3c451f32c24, type: 3}
   - {fileID: 1689175459837697240, guid: 6116e748169f0ba429af9ea7841c9e9c, type: 3}
   - {fileID: 1689175459837697240, guid: 6116e748169f0ba429af9ea7841c9e9c, type: 3}
   - {fileID: 1689175459837697240, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
   FloorTwo:
   - {fileID: 1689175459837697240, guid: 6a6bcaaeb1f37ad4b87a101c285ad624, type: 3}
-  - {fileID: 1689175459837697240, guid: 7a3798124e1ca2a4ea7a2835ec7ab44b, type: 3}
-  - {fileID: 1689175459837697240, guid: fd95cf7cadadfc94c871a8d2e9a4b503, type: 3}
-  - {fileID: 1689175459837697240, guid: fc375b3085547a74b8d1a46f03922771, type: 3}
-  - {fileID: 1689175459837697240, guid: 9c032072f65b20245a19066aa14c28b3, type: 3}
-  - {fileID: 1689175459837697240, guid: da51563396eb22246aba7c01b46ec4b7, type: 3}
-  - {fileID: 1689175459837697240, guid: 9c032072f65b20245a19066aa14c28b3, type: 3}
-  - {fileID: 1689175459837697240, guid: ebf6696214625364ea569fc363653950, type: 3}
-  - {fileID: 1689175459837697240, guid: 4368c57301e260f44b802796c2f9777b, type: 3}
-  - {fileID: 1689175459837697240, guid: f52c250aefb711041b1296c93ba109d4, type: 3}
-  - {fileID: 1689175459837697240, guid: b5d0774da3cae574d9afae247701364b, type: 3}
-  - {fileID: 1689175459837697240, guid: 733adcae75a196d4ebb662f9954315e1, type: 3}
-  - {fileID: 1689175459837697240, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
+  - {fileID: 1689175459837697240, guid: a30e76601af83164fae37717c21d6560, type: 3}
+  - {fileID: 1689175459837697240, guid: c5d30c8a2177eab4588a52e5b41cbce2, type: 3}
+  - {fileID: 1689175459837697240, guid: 632ecdcdac113b84d899e1c79e103802, type: 3}
+  - {fileID: 1689175459837697240, guid: 6500d5990c549f449988a58a923f27a1, type: 3}
+  - {fileID: 1689175459837697240, guid: 222aff151f4d7cd488552d942de2d437, type: 3}
+  - {fileID: 1689175459837697240, guid: 142cdefe54a749e4eb0b44418ffddb00, type: 3}
+  - {fileID: 1689175459837697240, guid: 03a89b7a0ce689c4998ca13b58a9f0e1, type: 3}
+  - {fileID: 1689175459837697240, guid: 0a285d422c4b90a4ab7c5dd133af5ab9, type: 3}
+  - {fileID: 1689175459837697240, guid: 8d8c9f6b39754af489ef1b1a538aa9b3, type: 3}
+  - {fileID: 1689175459837697240, guid: daafdb22a220ff444946348031cbb831, type: 3}
+  - {fileID: 1689175459837697240, guid: a5124a7354e0fee4dbc0fe4a152b2fba, type: 3}
+  - {fileID: 1689175459837697240, guid: bcb69aac79e5baa4e8ad095f2f5ae135, type: 3}
   FloorThree:
   - {fileID: 1689175459837697240, guid: 6a6bcaaeb1f37ad4b87a101c285ad624, type: 3}
-  - {fileID: 1689175459837697240, guid: aaaeb2cbf27e44f4cb1213b934d5e5cf, type: 3}
-  - {fileID: 1689175459837697240, guid: f73b3b83d2692be4d875b3181aac96ff, type: 3}
-  - {fileID: 1689175459837697240, guid: 444498e4c2a403d43a2513805abca991, type: 3}
-  - {fileID: 1689175459837697240, guid: 6116e748169f0ba429af9ea7841c9e9c, type: 3}
-  - {fileID: 1689175459837697240, guid: 13fa65149927d46479850981ad84edb5, type: 3}
-  - {fileID: 1689175459837697240, guid: a6dabf137a68ecd4195c72d9e4687432, type: 3}
-  - {fileID: 1689175459837697240, guid: 74388df57b13d32498a659070c856abc, type: 3}
-  - {fileID: 1689175459837697240, guid: 2c6946a8314586c40a6a075c33f211cc, type: 3}
-  - {fileID: 1689175459837697240, guid: 70ff2e9ad0a9bd4488685d240d2a9d9b, type: 3}
-  - {fileID: 1689175459837697240, guid: 61e66599be7e348448be8dea00a40145, type: 3}
-  - {fileID: 1689175459837697240, guid: fc375b3085547a74b8d1a46f03922771, type: 3}
+  - {fileID: 1689175459837697240, guid: e3d5b285f7b61054aa1cc92cbc9612d5, type: 3}
+  - {fileID: 1689175459837697240, guid: 06063fe6999fcbf40aed2b5d57a82866, type: 3}
+  - {fileID: 1689175459837697240, guid: fec668b4b67b7ef4ca032602c83ab903, type: 3}
+  - {fileID: 1689175459837697240, guid: 74aeb73abcf5f6344b71b3da8837631b, type: 3}
+  - {fileID: 1689175459837697240, guid: 87994d7f4ce4b4e4c980ca76452dc904, type: 3}
+  - {fileID: 1689175459837697240, guid: 63cbddfabd7c036429e1081b394fc0ec, type: 3}
+  - {fileID: 1689175459837697240, guid: 109a97a86807aa34fa1ae2cdc6a78488, type: 3}
+  - {fileID: 1689175459837697240, guid: d896d637d4deb9a448b70ff8f1ef2306, type: 3}
+  - {fileID: 1689175459837697240, guid: 9afabde7bc6427e48911ff90162d56bf, type: 3}
+  - {fileID: 1689175459837697240, guid: df626a5039d11ca4f8819d0d1a96e723, type: 3}
+  - {fileID: 1689175459837697240, guid: 94019cd0b032de344b0171336102b874, type: 3}
   - {fileID: 1689175459837697240, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
   FloorFour:
   - {fileID: 1689175459837697240, guid: 6a6bcaaeb1f37ad4b87a101c285ad624, type: 3}
@@ -1016,6 +1017,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1013882819}
   isPaused: 0
+--- !u!114 &585069132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585069126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &614729944
 GameObject:
   m_ObjectHideFlags: 0
@@ -3118,63 +3163,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
---- !u!1001 &1878381051
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1257048543124265044, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1257048543124265044, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1257048543124265044, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1257048543124265044, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1257048543124265044, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1257048543124265044, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1257048543124265044, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1257048543124265044, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1257048543124265044, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1257048543124265044, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1689175459837697240, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
-      propertyPath: m_Name
-      value: Room 9
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 409fc9781e285c341946871cf8c11f83, type: 3}
 --- !u!1 &1916937721
 GameObject:
   m_ObjectHideFlags: 0
@@ -3829,4 +3817,3 @@ SceneRoots:
   - {fileID: 1166297945}
   - {fileID: 1784580208}
   - {fileID: 1867486071}
-  - {fileID: 1878381051}
