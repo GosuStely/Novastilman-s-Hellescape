@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    public GameOverScreen GameOverScreen;
     private PlayerMovement player;
     [SerializeField] private int numberOfHearts;
     public Image[] hearts;
@@ -35,5 +36,13 @@ public class Health : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
+        if (player.playerHitpoint <= 0)
+        {
+            GameOver();
+        }
+    }
+    public void GameOver()
+    {
+        GameOverScreen.Setup();
     }
 }
