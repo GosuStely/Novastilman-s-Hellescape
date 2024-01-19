@@ -60,6 +60,7 @@ TagManager:
   - Fire_Shield
   - Ice_Shield
   - Store
+  - Rock
   layers:
   - Default
   - TransparentFX
