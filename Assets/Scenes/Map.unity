@@ -4529,7 +4529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6884794246931983935, guid: 16b324587436cf041af2ebb995e3b661, type: 3}
       propertyPath: SPEED
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6884794246931983935, guid: 16b324587436cf041af2ebb995e3b661, type: 3}
       propertyPath: fireDelay

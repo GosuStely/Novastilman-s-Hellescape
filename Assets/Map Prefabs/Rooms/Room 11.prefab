@@ -9663,7 +9663,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6532932678006255675, guid: dd1016e5c3f7deb4fb04ecdc23661875, type: 3}
       propertyPath: timeBtwShots
-      value: 1
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6532932678006255675, guid: dd1016e5c3f7deb4fb04ecdc23661875, type: 3}
+      propertyPath: startTimeBtwShots
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
