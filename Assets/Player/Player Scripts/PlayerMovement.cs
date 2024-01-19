@@ -18,7 +18,7 @@ public class PlayerMovement : PLAYERSTATS
     public GameObject arrowPrefab;
     private float bulletSpeed = 10f;
     private float nextFire = 0.0f;
-    public float fireDelay = 1f; // used for inventory
+    public float fireDelay = 0.5f; // used for inventory
     public Transform firePoint; // firePoint 
     public float playerHitpoint;
 

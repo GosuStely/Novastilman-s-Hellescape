@@ -3395,11 +3395,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6884794246931983935, guid: 16b324587436cf041af2ebb995e3b661, type: 3}
       propertyPath: SPEED
-      value: 20
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884794246931983935, guid: 16b324587436cf041af2ebb995e3b661, type: 3}
+      propertyPath: fireDelay
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 6884794246931983935, guid: 16b324587436cf041af2ebb995e3b661, type: 3}
       propertyPath: ATTACKSPEED
-      value: 1
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 6915327519452931800, guid: 16b324587436cf041af2ebb995e3b661, type: 3}
       propertyPath: m_Name
