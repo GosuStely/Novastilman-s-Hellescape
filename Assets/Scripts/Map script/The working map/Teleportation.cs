@@ -1,7 +1,10 @@
 using UnityEngine;
+using TMPro;
 
 public class Teleportation : MonoBehaviour
 {
+    public TextMeshProUGUI RoomCounter;
+    public int counter;
     private void OnTriggerEnter2D(Collider2D other)
     {
         //where the person will teleport
@@ -16,6 +19,8 @@ public class Teleportation : MonoBehaviour
             mainCameraVector3 = Camera.main.transform.position;
             mainCameraVector3.x += 80;
             Camera.main.transform.position = mainCameraVector3;
+            counter++;
+            RoomCounter.text = "Room Number : " + counter.ToString();
         }
     }
 
