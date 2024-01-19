@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  checkRadius: 45
+  checkRadius: 90
   attackRadius: 1.8
   bulletForce: 20
   attackCoolDown: 2

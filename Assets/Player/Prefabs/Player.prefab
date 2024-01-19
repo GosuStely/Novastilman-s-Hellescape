@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 5
   DMG: 3
-  ATTACKSPEED: 1
+  ATTACKSPEED: 1000
   SPEED: 5
   arrowPrefab: {fileID: 6325887549563639829, guid: 2805714e9c7b11d4b935d6262b508771, type: 3}
   firePoint: {fileID: 4220896545146764629}
