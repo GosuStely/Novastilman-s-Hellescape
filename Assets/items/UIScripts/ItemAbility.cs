@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Overlays;
 using UnityEngine;
 
 public class ItemAbility : MonoBehaviour
@@ -7,11 +8,13 @@ public class ItemAbility : MonoBehaviour
     private Health health;
     private PlayerMovement player;
     private DemonMovement demon;
+    private RectTransform HPHolder;
 
     void Start() {
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         demon = GameObject.FindGameObjectWithTag("Mob").GetComponent<DemonMovement>();
+        HPHolder = GameObject.FindGameObjectWithTag("HPHolder").GetComponent<RectTransform>();
     }
 
     public void Ring(int healthCount) {
@@ -32,6 +35,20 @@ public class ItemAbility : MonoBehaviour
     public void Gloves(float dexterity) {
         player.fireDelay = dexterity;
         Destroy(gameObject);
+    }
+
+    public void Chestplate(int heartCount)
+    {
+        player.playerHitpoint += heartCount;
+        Debug.Log("this logs" + player.playerHitpoint);
+
+        for (int i = health.numberOfHearts; i <= player.playerHitpoint; i++)
+        {
+            health.hearts[i].gameObject.SetActive(true);
+        }
+      
+        Destroy(gameObject);
+        
     }
 
     public void Necklece(float time) {

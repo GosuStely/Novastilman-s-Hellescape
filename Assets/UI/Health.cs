@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
 {
     public GameOverScreen GameOverScreen;
     private PlayerMovement player;
-    [SerializeField] private int numberOfHearts;
+    public int numberOfHearts;
     public Image[] hearts;
     [SerializeField] private Sprite fullHeart;
     [SerializeField] private Sprite emptyHeart;
@@ -18,8 +18,8 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        if (player.playerHitpoint > numberOfHearts) {
-            player.playerHitpoint = numberOfHearts;
+        if (player.playerHitpoint > numberOfHearts && player.playerHitpoint <= 20) {
+            numberOfHearts = (int)player.playerHitpoint;
         }
 
         for (int i = 0; i < hearts.Length; i++)
