@@ -45,4 +45,8 @@ public class Health : MonoBehaviour
     {
         GameOverScreen.Setup();
     }
+
+    public void AddHealth(int amountOfHealth) {
+        player.playerHitpoint += amountOfHealth;
+    }
 }

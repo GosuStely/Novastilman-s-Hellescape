@@ -7,7 +7,7 @@ using Vector3 = UnityEngine.Vector3;
 
 public class PlayerMovement : PLAYERSTATS
 {
-    private float speed;
+    public float playerSpeed; // used for inventory
     private Rigidbody2D rb;
     private Animator animator;
     private bool isFacingRight = true;
@@ -18,7 +18,7 @@ public class PlayerMovement : PLAYERSTATS
     public GameObject arrowPrefab;
     private float bulletSpeed = 10f;
     private float nextFire = 0.0f;
-    private float fireDelay = 1f;
+    public float fireDelay = 1f; // used for inventory
     public Transform firePoint; // firePoint 
     public float playerHitpoint;
 
@@ -28,7 +28,7 @@ public class PlayerMovement : PLAYERSTATS
     [SerializeField] private Material newMaterial;
     [SerializeField] private Material defaultMaterial;
 
-    private float playerDamage = 3f;
+    public float playerDamage = 3f; // used for inventory
 
     private Arrow arrow;
 
@@ -41,7 +41,7 @@ public class PlayerMovement : PLAYERSTATS
     float moveVertical;
 
     void Start() {
-        speed = SPEED;
+        playerSpeed = SPEED;
         fireDelay = ATTACKSPEED;
         playerHitpoint = HP;
         playerDamage = DMG;
@@ -127,7 +127,7 @@ public class PlayerMovement : PLAYERSTATS
         movement = new Vector2(moveHorizontal, moveVertical);
 
         // Apply movement to the rigidbody
-        rb.velocity = movement * speed;
+        rb.velocity = movement * playerSpeed;
     }
 
     void Flip() {
@@ -167,7 +167,7 @@ public class PlayerMovement : PLAYERSTATS
         if (waiting) {
             return;
         }
-        speed = 0f;
+        playerSpeed = 0f;
         sr.material = newMaterial;
         StartCoroutine(Wait(duration));
     }
@@ -175,7 +175,7 @@ public class PlayerMovement : PLAYERSTATS
     IEnumerator Wait(float duration) {
         waiting = true;
         yield return new WaitForSecondsRealtime(duration);
-        speed = SPEED;
+        playerSpeed = SPEED;
         sr.material = defaultMaterial;
         waiting = false;
     }
