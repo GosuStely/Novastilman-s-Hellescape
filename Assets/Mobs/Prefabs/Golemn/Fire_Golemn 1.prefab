@@ -281,8 +281,8 @@ MonoBehaviour:
   attackRadius: 40
   bulletForce: 20.1
   shouldRotate: 1
-  timeBtwShots: 1.5
-  startTimeBtwShots: 1.5
+  timeBtwShots: 2.5
+  startTimeBtwShots: 2.5
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64

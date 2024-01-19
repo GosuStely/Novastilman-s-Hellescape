@@ -106,7 +106,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2726299212089267680, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
       propertyPath: HP
-      value: 5
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726299212089267680, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
+      propertyPath: speed
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2726299212089267680, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
       propertyPath: pointA
