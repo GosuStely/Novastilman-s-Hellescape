@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4212273320457504665}
   - component: {fileID: 7014051535641070610}
   - component: {fileID: 4057195926621901804}
-  - component: {fileID: 5809804963372277519}
   - component: {fileID: 7560614314452645611}
+  - component: {fileID: 8570088425202947475}
   m_Layer: 0
   m_Name: WobblyDemon
   m_TagString: Mob
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 1000
   m_Sprite: {fileID: -1437557437, guid: 58417e2ab63453043aaef57213da0cdb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -136,8 +136,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &5809804963372277519
-BoxCollider2D:
+--- !u!114 &7560614314452645611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4605859890683227143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3431f5aa3793ab24c8e97f65a1063506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  checkRadius: 45
+  attackRadius: 1.8
+  bulletForce: 20
+  attackCoolDown: 2
+  lastAttackTime: 0
+  shouldRotate: 1
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  direction: {x: 0, y: 0, z: 0}
+  HP: 2
+--- !u!70 &8570088425202947475
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -168,40 +192,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.022319198, y: 0.1339202}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
-    newSize: {x: 6.4, y: 6.4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.9180834, y: 4.6590414}
-  m_EdgeRadius: 0
---- !u!114 &7560614314452645611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4605859890683227143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3431f5aa3793ab24c8e97f65a1063506, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  checkRadius: 45
-  attackRadius: 1.8
-  bulletForce: 20
-  attackCoolDown: 2
-  lastAttackTime: 0
-  shouldRotate: 1
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
-  direction: {x: 0, y: 0, z: 0}
-  HP: 2
+  m_Offset: {x: 0.01955884, y: 0.15646662}
+  m_Size: {x: 2.6448143, y: 4.483292}
+  m_Direction: 0

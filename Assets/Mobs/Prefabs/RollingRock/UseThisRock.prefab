@@ -116,6 +116,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocky
       objectReference: {fileID: 0}
+    - target: {fileID: 4650249578969669859, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 4842479445812168526, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.98
