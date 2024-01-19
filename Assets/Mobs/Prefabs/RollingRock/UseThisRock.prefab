@@ -105,6 +105,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 6308658457413286584}
     m_Modifications:
     - target: {fileID: 2726299212089267680, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
+      propertyPath: HP
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726299212089267680, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
       propertyPath: pointA
       value: 
       objectReference: {fileID: 1658329562185344608}

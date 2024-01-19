@@ -271,10 +271,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkRadius: 45
   attackRadius: 45
+  bulletForce: 20
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 8
-  HP: 3
+  projectile: {fileID: 0}
+  timeBtwShots: 0
+  startTimeBtwShots: 0
+  HP: 10
 --- !u!1 &6141191387401128580
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,13 +376,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109ca4f080079f848903839445c6ffb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 8
   followSpeed: 5
   eyeHole: {fileID: 3643245849850770690}
-  attackRadius: 45
-  bulletForce: 20
-  projectile: {fileID: 3946759380407682411, guid: e56922d8cd49e6744bfcd6b04f9d513a, type: 3}
-  timeBtwShots: 1.5
-  startTimeBtwShots: 1.5
