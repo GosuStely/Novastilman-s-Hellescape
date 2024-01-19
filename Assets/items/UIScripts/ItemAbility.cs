@@ -1,7 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Overlays;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemAbility : MonoBehaviour
 {
@@ -45,6 +44,7 @@ public class ItemAbility : MonoBehaviour
         for (int i = health.numberOfHearts; i <= player.playerHitpoint; i++)
         {
             health.hearts[i].gameObject.SetActive(true);
+      
         }
       
         Destroy(gameObject);
