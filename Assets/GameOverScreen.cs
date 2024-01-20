@@ -9,7 +9,7 @@ public class GameOverScreen : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Map");
     }
     public void GoToMainMenu()
     {
