@@ -132,4 +132,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1333380112368841921}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -8356788869847776288}
+        m_TargetAssemblyTypeName: ItemAbility, Assembly-CSharp
+        m_MethodName: Helmet
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

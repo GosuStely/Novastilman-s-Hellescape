@@ -16,7 +16,7 @@ public class PlayerMovement : PLAYERSTATS
     private bool isAttacking;
     private bool waiting;
     public GameObject arrowPrefab;
-    private float bulletSpeed = 10f;
+    public float bulletSpeed = 10f;
     private float nextFire = 0.0f;
     private float nextBomb = 0.0f;
     public float fireDelay = 0.5f; // used for inventory
@@ -138,6 +138,7 @@ public class PlayerMovement : PLAYERSTATS
     IEnumerator BombTicking() {
         yield return new WaitForSeconds(2f);
         bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = true;
+        yield return new WaitForSeconds(1f);
     }
 
     void Flip() {

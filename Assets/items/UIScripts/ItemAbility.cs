@@ -51,6 +51,11 @@ public class ItemAbility : MonoBehaviour
         
     }
 
+    public void Helmet(int bulletCount) {
+        player.bulletSpeed = bulletCount;
+        Destroy(gameObject);
+    }
+
     public void Necklece(float time) {
         StartCoroutine(SlowWobblySpeed(time));
         Destroy(gameObject);
