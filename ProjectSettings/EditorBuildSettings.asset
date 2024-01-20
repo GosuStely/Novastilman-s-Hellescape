@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 74cb8e075d896c649bb637a255bb92e7
   - enabled: 1
+    path: Assets/Scenes/OpeningScene.unity
+    guid: c96fc01cb771ce8428d2e155b05b720f
+  - enabled: 1
+    path: Assets/Scenes/HellCutScene.unity
+    guid: 31c59d3931ecb2d4f87fa50a1b06cba3
+  - enabled: 1
     path: Assets/Scenes/Map.unity
     guid: 3402b923cc06641408527cac051ddf3d
   - enabled: 1
