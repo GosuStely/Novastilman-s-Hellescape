@@ -41,7 +41,7 @@ public class ItemAbility : MonoBehaviour
         player.playerHitpoint += heartCount;
         Debug.Log("this logs" + player.playerHitpoint);
 
-        for (int i = health.numberOfHearts; i <= player.playerHitpoint; i++)
+        for (int i = health.numberOfHearts; i <= player.playerHitpoint + heartCount; i++) // i = 5; i <= 5 + 1(bronze chestplate); i++
         {
             health.hearts[i].gameObject.SetActive(true);
       

@@ -109,6 +109,19 @@ public class Eye_Movement : MonoBehaviour
                 StartCoroutine(DestroyAfterDeath());
             }
         }
+
+        if (collision.tag == "Bomb")
+        {
+
+            HP -= 1;
+            if (HP <= 0)
+            {
+                isRunOutOfHP = true;
+                anim.SetTrigger("isDead");
+
+                StartCoroutine(DestroyAfterDeath());
+            }
+        }
     }
 
     IEnumerator DestroyAfterDeath()

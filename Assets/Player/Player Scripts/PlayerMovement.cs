@@ -18,7 +18,9 @@ public class PlayerMovement : PLAYERSTATS
     public GameObject arrowPrefab;
     private float bulletSpeed = 10f;
     private float nextFire = 0.0f;
+    private float nextBomb = 0.0f;
     public float fireDelay = 0.5f; // used for inventory
+    public float bombDelay = 1f;
     public Transform firePoint; // firePoint 
     public float playerHitpoint;
 
@@ -77,10 +79,11 @@ public class PlayerMovement : PLAYERSTATS
             ChangeAnimationState(PLAYER_IDLE);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextBomb) {
             var copy = Instantiate(bombPrefab, new Vector3(transform.position.x + 0.5f, transform.position.y -0.85f, transform.position.z), Quaternion.identity);
-            bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = true;
+            StartCoroutine(BombTicking()); // bomb timer
             Destroy(copy, 2.20f);
+            nextBomb = Time.time + bombDelay;
         }
         
         
@@ -128,6 +131,14 @@ public class PlayerMovement : PLAYERSTATS
 
         // Apply movement to the rigidbody
         rb.velocity = movement * playerSpeed;
+    }
+
+
+    // bomb coroutine
+    IEnumerator BombTicking() {
+        bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        yield return new WaitForSeconds(2f);
+        bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = true;
     }
 
     void Flip() {

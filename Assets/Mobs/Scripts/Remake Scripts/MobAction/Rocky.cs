@@ -112,6 +112,17 @@ public class Rocky : MonoBehaviour
                 StartCoroutine(DestroyAfterDeath());
             }
         }
+
+        if (other.tag == "Bomb") {
+            HP -= 1;
+            if (HP <= 0)
+            {
+                speed = 0;
+                anim.SetTrigger("isDead");
+
+                StartCoroutine(DestroyAfterDeath());
+            }
+        }
     }
     IEnumerator DestroyAfterDeath()
     {

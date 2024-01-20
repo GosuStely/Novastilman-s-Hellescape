@@ -96,7 +96,7 @@ public class DemonMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Arrow")
+        if (collision.tag == "Arrow" || collision.tag == "Bomb")
         {
             Destroy(collision.gameObject);
 
