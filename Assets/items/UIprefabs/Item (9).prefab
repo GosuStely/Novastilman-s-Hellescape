@@ -135,7 +135,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: -4742542085872694930}
         m_TargetAssemblyTypeName: ItemAbility, Assembly-CSharp
-        m_MethodName: Ring
+        m_MethodName: Boots
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
