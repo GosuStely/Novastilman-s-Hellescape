@@ -103,6 +103,7 @@ public class DemonMovement : MonoBehaviour
             HP -= 1;
             if (HP <= 0)
             {
+                speed = 0;
                 isRunOutOfHP = true;
                 anim.SetTrigger("isDead");
 
