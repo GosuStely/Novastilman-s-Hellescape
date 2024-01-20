@@ -137,8 +137,7 @@ public class PlayerMovement : PLAYERSTATS
     // bomb coroutine
     IEnumerator BombTicking() {
         yield return new WaitForSeconds(2f);
-        bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = true;
-        yield return new WaitForSeconds(1f);
+        bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = true;    
     }
 
     void Flip() {
