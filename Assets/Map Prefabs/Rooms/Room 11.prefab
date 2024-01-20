@@ -9615,7 +9615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650287247793476079, guid: dd1016e5c3f7deb4fb04ecdc23661875, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.75
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 650287247793476079, guid: dd1016e5c3f7deb4fb04ecdc23661875, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9662,12 +9662,16 @@ PrefabInstance:
       value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6532932678006255675, guid: dd1016e5c3f7deb4fb04ecdc23661875, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 5950324280885363593, guid: 0c2789c6329309944b0848f54acc9cb6, type: 3}
+    - target: {fileID: 6532932678006255675, guid: dd1016e5c3f7deb4fb04ecdc23661875, type: 3}
       propertyPath: timeBtwShots
-      value: 0.5
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6532932678006255675, guid: dd1016e5c3f7deb4fb04ecdc23661875, type: 3}
       propertyPath: startTimeBtwShots
-      value: 0.5
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

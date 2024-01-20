@@ -204,4 +204,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   direction: {x: 0, y: 0, z: 0}
-  HP: 2
+  HP: 1

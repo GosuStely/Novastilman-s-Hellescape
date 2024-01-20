@@ -9855,6 +9855,10 @@ PrefabInstance:
       propertyPath: HP
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7560614314452645611, guid: 6ec04b4bc698975489368f0beff6e102, type: 3}
+      propertyPath: attackRadius
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
