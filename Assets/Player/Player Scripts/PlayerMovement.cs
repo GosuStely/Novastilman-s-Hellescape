@@ -53,8 +53,6 @@ public class PlayerMovement : PLAYERSTATS
         arrow = GetComponent<Arrow>();
         sr = GetComponent<SpriteRenderer>();
 
-        bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = false;
-
         if (gameObject == null) {
             Debug.LogError("Plaeyr is null!!!");
         }
@@ -63,6 +61,8 @@ public class PlayerMovement : PLAYERSTATS
     // Update is called once per frame
     void Update()
     {
+        bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+
         // Capture input axes
         moveHorizontal = 0;
         moveVertical = 0;
@@ -136,7 +136,6 @@ public class PlayerMovement : PLAYERSTATS
 
     // bomb coroutine
     IEnumerator BombTicking() {
-        bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = false;
         yield return new WaitForSeconds(2f);
         bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = true;
     }
