@@ -129,6 +129,7 @@ Transform:
   - {fileID: 2047172207085199949}
   - {fileID: 5795226283022454949}
   - {fileID: 6815763262341149605}
+  - {fileID: 531071172081859717}
   - {fileID: 368103368977813529}
   - {fileID: 8875898993864003256}
   - {fileID: 2746322691883050442}
@@ -9747,6 +9748,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4977914219574187670, guid: f9c8a71eefad1d24b979e189607c4ff0, type: 3}
   m_PrefabInstance: {fileID: 354810092667667788}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &674697230945429524
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1257048543124265044}
+    m_Modifications:
+    - target: {fileID: 1009861729029624977, guid: 6ec04b4bc698975489368f0beff6e102, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009861729029624977, guid: 6ec04b4bc698975489368f0beff6e102, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009861729029624977, guid: 6ec04b4bc698975489368f0beff6e102, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009861729029624977, guid: 6ec04b4bc698975489368f0beff6e102, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009861729029624977, guid: 6ec04b4bc698975489368f0beff6e102, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009861729029624977, guid: 6ec04b4bc698975489368f0beff6e102, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009861729029624977, guid: 6ec04b4bc698975489368f0beff6e102, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009861729029624977, guid: 6ec04b4bc698975489368f0beff6e102, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009861729029624977, guid: 6ec04b4bc698975489368f0beff6e102, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009861729029624977, guid: 6ec04b4bc698975489368f0beff6e102, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605859890683227143, guid: 6ec04b4bc698975489368f0beff6e102, type: 3}
+      propertyPath: m_Name
+      value: WobblyDemon (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6ec04b4bc698975489368f0beff6e102, type: 3}
+--- !u!4 &531071172081859717 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1009861729029624977, guid: 6ec04b4bc698975489368f0beff6e102, type: 3}
+  m_PrefabInstance: {fileID: 674697230945429524}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &799525221955437704
 PrefabInstance:

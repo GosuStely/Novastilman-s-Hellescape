@@ -288,4 +288,4 @@ MonoBehaviour:
     m_Bits: 64
   projectile: {fileID: 5950324280885363593, guid: 73fb118c2c0c3914c8961c1879cc925b, type: 3}
   direction: {x: 0, y: 0, z: 0}
-  HP: 6
+  HP: 4

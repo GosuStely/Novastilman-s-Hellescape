@@ -218,14 +218,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 5
   DMG: 3
-  ATTACKSPEED: 1000
+  ATTACKSPEED: 0.8
   SPEED: 5
+  playerSpeed: 0
   arrowPrefab: {fileID: 6325887549563639829, guid: 2805714e9c7b11d4b935d6262b508771, type: 3}
+  bulletSpeed: 10
+  fireDelay: 0.8
+  bombDelay: 1
   firePoint: {fileID: 4220896545146764629}
   playerHitpoint: 0
   bombPrefab: {fileID: 7807195891350963934, guid: a977276c9dfcadf4fbece95ce51ee14f, type: 3}
   newMaterial: {fileID: 2100000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
   defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  playerDamage: 3
 --- !u!114 &3033655361401742505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb940b8050fa00543890eb9c3f661cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOverScreen: {fileID: 0}
   numberOfHearts: 5
   hearts:
   - {fileID: 0}
