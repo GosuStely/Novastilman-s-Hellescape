@@ -56,11 +56,13 @@ public class BossSkull : MonoBehaviour
             Destroy(collision.gameObject);
 
             HP -= 1;
+            FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
                 speed = 0;
                 isRunOutOfHP = true;
                 anim.SetTrigger("isDead");
+                FindObjectOfType<AudioManager>().Play("MonsterDeath");
 
                 StartCoroutine(DestroyAfterDeath());
             }

@@ -7,7 +7,7 @@ using Vector3 = UnityEngine.Vector3;
 
 public class PlayerMovement : PLAYERSTATS
 {
-    public float playerSpeed; // used for inventory
+    [HideInInspector] public float playerSpeed; // used for inventory
     private Rigidbody2D rb;
     private Animator animator;
     private bool isFacingRight = true;
@@ -30,7 +30,7 @@ public class PlayerMovement : PLAYERSTATS
     [SerializeField] private Material newMaterial;
     [SerializeField] private Material defaultMaterial;
 
-    public float playerDamage = 3f; // used for inventory
+    [HideInInspector] public float playerDamage = 3f; // used for inventory
 
     private Arrow arrow;
 
@@ -136,8 +136,8 @@ public class PlayerMovement : PLAYERSTATS
 
     // bomb coroutine
     IEnumerator BombTicking() {
-        yield return new WaitForSeconds(2f);
-        bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = true;    
+        yield return new WaitForSecondsRealtime(1.6f);
+        bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = true;
     }
 
     void Flip() {
@@ -193,6 +193,7 @@ public class PlayerMovement : PLAYERSTATS
     public void TakeDamage(int amount)
     {
         playerHitpoint -= amount;
+        FindObjectOfType<AudioManager>().Play("PlayerHit");
         Stop(0.1f);
         // animator.SetTrigger("PlayerHit");
         // stunning effect for a player

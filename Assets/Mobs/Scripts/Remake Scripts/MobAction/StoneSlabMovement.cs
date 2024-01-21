@@ -82,6 +82,7 @@ public class StoneSlabMovement : MonoBehaviour
             Destroy(collision.gameObject);
 
             HP -= 1;
+            FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
                 isRunOutOfHP = true;
@@ -93,6 +94,7 @@ public class StoneSlabMovement : MonoBehaviour
 
         if (collision.tag == "Bomb") {
             HP -= 1;
+            FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
                 isRunOutOfHP = true;

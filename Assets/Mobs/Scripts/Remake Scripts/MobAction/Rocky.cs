@@ -103,6 +103,7 @@ public class Rocky : MonoBehaviour
             Destroy(other.gameObject);
 
             HP -= 1;
+            FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
                 speed = 0;
@@ -115,6 +116,7 @@ public class Rocky : MonoBehaviour
 
         if (other.tag == "Bomb") {
             HP -= 1;
+            FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
                 speed = 0;

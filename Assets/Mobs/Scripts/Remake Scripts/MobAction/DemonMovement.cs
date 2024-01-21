@@ -101,6 +101,7 @@ public class DemonMovement : MonoBehaviour
             Destroy(collision.gameObject);
 
             HP -= 1;
+            FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
                 speed = 0;

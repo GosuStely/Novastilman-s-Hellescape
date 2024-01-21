@@ -101,6 +101,7 @@ public class Eye_Movement : MonoBehaviour
             Destroy(collision.gameObject);
 
             HP -= 1;
+            FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
                 isRunOutOfHP = true;
@@ -114,6 +115,7 @@ public class Eye_Movement : MonoBehaviour
         {
 
             HP -= 1;
+            FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
                 isRunOutOfHP = true;

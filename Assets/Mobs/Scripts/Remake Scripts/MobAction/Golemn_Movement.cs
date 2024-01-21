@@ -99,6 +99,7 @@ public class Golemn_Movement : MonoBehaviour
         if (collision.tag == "Arrow" || collision.tag == "Bomb")
         {
             Destroy(collision.gameObject);
+            FindObjectOfType<AudioManager>().Play("MobHit"); 
 
             HP -= 1;
             if (HP <= 0)
