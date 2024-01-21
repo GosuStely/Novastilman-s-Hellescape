@@ -7,13 +7,11 @@ public class ItemAbility : MonoBehaviour
     private Health health;
     private PlayerMovement player;
     private DemonMovement demon;
-    private RectTransform HPHolder;
 
     void Start() {
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         demon = GameObject.FindGameObjectWithTag("Mob").GetComponent<DemonMovement>();
-        HPHolder = GameObject.FindGameObjectWithTag("HPHolder").GetComponent<RectTransform>();
     }
 
     public void Ring(int healthCount) {
@@ -62,7 +60,7 @@ public class ItemAbility : MonoBehaviour
     }
 
     IEnumerator SlowWobblySpeed(float time) {
-        demon.speed = 0.5f;
+        demon.speed = 0f;
         yield return new WaitForSeconds(time);
         demon.speed = 3f;
     }
