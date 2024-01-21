@@ -22,6 +22,8 @@ public class Rocky : MonoBehaviour
 
     [SerializeField] private int HP = 3;
 
+    public List<LootItems> lootTable = new List<LootItems>();
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -103,7 +105,7 @@ public class Rocky : MonoBehaviour
             Destroy(other.gameObject);
 
             HP -= 1;
-            FindObjectOfType<AudioManager>().Play("MobHit");
+            //FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
                 speed = 0;
@@ -116,7 +118,7 @@ public class Rocky : MonoBehaviour
 
         if (other.tag == "Bomb") {
             HP -= 1;
-            FindObjectOfType<AudioManager>().Play("MobHit");
+            //FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
                 speed = 0;
@@ -130,6 +132,18 @@ public class Rocky : MonoBehaviour
     {
         yield return new WaitForSeconds(1.2f);
         Destroy(gameObject);
+        foreach (LootItems lootItem in lootTable)
+        {
+            if (Random.Range(0f, 100f) <= lootItem.dropChance)
+            {
+                InstantiateLoot(lootItem.itemPrefab);
+            }
+        }
+    }
+
+    void InstantiateLoot(GameObject loot)
+    {
+        GameObject droppedLoot = Instantiate(loot, transform.position, Quaternion.identity);
     }
 
 }

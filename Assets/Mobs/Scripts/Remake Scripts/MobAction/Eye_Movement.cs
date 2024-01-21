@@ -28,6 +28,8 @@ public class Eye_Movement : MonoBehaviour
 
     [SerializeField] private int HP = 1;
 
+    public List<LootItems> lootTable = new List<LootItems>();
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -101,28 +103,30 @@ public class Eye_Movement : MonoBehaviour
             Destroy(collision.gameObject);
 
             HP -= 1;
-            FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
+                speed = 0;
                 isRunOutOfHP = true;
                 anim.SetTrigger("isDead");
 
                 StartCoroutine(DestroyAfterDeath());
             }
+            //FindObjectOfType<AudioManager>().Play("MobHit");
         }
 
         if (collision.tag == "Bomb")
         {
 
             HP -= 1;
-            FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
+                speed = 0;
                 isRunOutOfHP = true;
                 anim.SetTrigger("isDead");
 
                 StartCoroutine(DestroyAfterDeath());
             }
+            //FindObjectOfType<AudioManager>().Play("MobHit");
         }
     }
 
@@ -130,5 +134,17 @@ public class Eye_Movement : MonoBehaviour
     {
         yield return new WaitForSeconds(0.7f);
         Destroy(gameObject);
+        foreach (LootItems lootItem in lootTable)
+        { 
+            if(Random.Range(0f,100f) <= lootItem.dropChance)
+            {
+                InstantiateLoot(lootItem.itemPrefab);
+            }
+        }
+    }
+
+    void InstantiateLoot(GameObject loot) 
+    {
+        GameObject droppedLoot = Instantiate(loot, transform.position, Quaternion.identity);
     }
 }

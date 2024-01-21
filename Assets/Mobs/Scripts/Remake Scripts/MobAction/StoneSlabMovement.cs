@@ -28,6 +28,8 @@ public class StoneSlabMovement : MonoBehaviour
 
     [SerializeField] private int HP = 2;
 
+    public List<LootItems> lootTable = new List<LootItems>();
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -82,7 +84,7 @@ public class StoneSlabMovement : MonoBehaviour
             Destroy(collision.gameObject);
 
             HP -= 1;
-            FindObjectOfType<AudioManager>().Play("MobHit");
+            //FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
                 isRunOutOfHP = true;
@@ -94,7 +96,7 @@ public class StoneSlabMovement : MonoBehaviour
 
         if (collision.tag == "Bomb") {
             HP -= 1;
-            FindObjectOfType<AudioManager>().Play("MobHit");
+            //FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
                 isRunOutOfHP = true;
@@ -109,6 +111,18 @@ public class StoneSlabMovement : MonoBehaviour
     { 
         yield return new WaitForSeconds(0.7f);
         Destroy(gameObject);
+        foreach (LootItems lootItem in lootTable)
+        {
+            if (Random.Range(0f, 100f) <= lootItem.dropChance)
+            {
+                InstantiateLoot(lootItem.itemPrefab);
+            }
+        }
+    }
+
+    void InstantiateLoot(GameObject loot)
+    {
+        GameObject droppedLoot = Instantiate(loot, transform.position, Quaternion.identity);
     }
     //void Shoot()
     //{

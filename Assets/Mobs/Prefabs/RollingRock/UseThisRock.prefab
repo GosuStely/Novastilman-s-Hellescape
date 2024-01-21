@@ -120,6 +120,18 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 1069696784702820627}
+    - target: {fileID: 2726299212089267680, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
+      propertyPath: lootTable.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726299212089267680, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
+      propertyPath: lootTable.Array.data[0].dropChance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726299212089267680, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
+      propertyPath: lootTable.Array.data[0].itemPrefab
+      value: 
+      objectReference: {fileID: 5950324280885363593, guid: 27310c2a1bc831140884185e9bde890e, type: 3}
     - target: {fileID: 3326599070354856914, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
       propertyPath: m_Name
       value: Rocky
@@ -167,6 +179,10 @@ PrefabInstance:
     - target: {fileID: 4842479445812168526, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254288586527568938, guid: fd530981abea6064cbefec40308c4c7b, type: 3}
+      propertyPath: m_Mass
+      value: 100000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

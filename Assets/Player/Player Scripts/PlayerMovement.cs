@@ -207,4 +207,9 @@ public class PlayerMovement : PLAYERSTATS
             }
         }
     }
+
+    public void GetHP(int amount)
+    {
+        playerHitpoint += amount;
+    }
 }

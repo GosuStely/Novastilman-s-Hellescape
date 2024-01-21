@@ -132,6 +132,9 @@ MonoBehaviour:
     m_Bits: 64
   speed: 10
   HP: 3
+  lootTable:
+  - itemPrefab: {fileID: 5950324280885363593, guid: 27310c2a1bc831140884185e9bde890e, type: 3}
+    dropChance: 50
 --- !u!50 &8254288586527568938
 Rigidbody2D:
   serializedVersion: 4

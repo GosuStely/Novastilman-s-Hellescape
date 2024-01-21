@@ -28,6 +28,9 @@ public class GhostMovement : MonoBehaviour
 
     [SerializeField] private int HP = 1;
 
+    public List<LootItems> lootTable = new List<LootItems>();
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -99,10 +102,11 @@ public class GhostMovement : MonoBehaviour
         if (collision.tag == "Arrow")
         {
             Destroy(collision.gameObject);
-            FindObjectOfType<AudioManager>().Play("MobHit");
+            //FindObjectOfType<AudioManager>().Play("MobHit");
             HP -= 1;
             if (HP <= 0)
             {
+                speed = 0;
                 isRunOutOfHP = true;
                 anim.SetTrigger("isDead");
 
@@ -113,9 +117,10 @@ public class GhostMovement : MonoBehaviour
 
         if (collision.tag == "Bomb") {
             HP -= 1;
-            FindObjectOfType<AudioManager>().Play("MobHit");
+            //FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
+                speed = 0;
                 isRunOutOfHP = true;;
                 anim.SetTrigger("isDead");
 
@@ -128,5 +133,17 @@ public class GhostMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
+        foreach (LootItems lootItem in lootTable)
+        {
+            if (Random.Range(0f, 100f) <= lootItem.dropChance)
+            {
+                InstantiateLoot(lootItem.itemPrefab);
+            }
+        }
+    }
+
+    void InstantiateLoot(GameObject loot)
+    {
+        GameObject droppedLoot = Instantiate(loot, transform.position, Quaternion.identity);
     }
 }

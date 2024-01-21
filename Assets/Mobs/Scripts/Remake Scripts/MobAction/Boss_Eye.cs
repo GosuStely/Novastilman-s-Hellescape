@@ -94,12 +94,12 @@ public class Boss_Eye : MonoBehaviour
             Destroy(collision.gameObject);
 
             HP -= 1;
-            FindObjectOfType<AudioManager>().Play("MobHit");
+            //FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
                 runOutOfHP = true;
                 anim.SetTrigger("isDead");
-                FindObjectOfType<AudioManager>().Play("MonsterDeath");
+                //FindObjectOfType<AudioManager>().Play("MonsterDeath");
 
                 StartCoroutine(DestroyAfterDeath());
             }
