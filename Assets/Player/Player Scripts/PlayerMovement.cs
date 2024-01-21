@@ -61,7 +61,6 @@ public class PlayerMovement : PLAYERSTATS
     // Update is called once per frame
     void Update()
     {
-        bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = false;
 
         // Capture input axes
         moveHorizontal = 0;
@@ -136,8 +135,10 @@ public class PlayerMovement : PLAYERSTATS
 
     // bomb coroutine
     IEnumerator BombTicking() {
-        yield return new WaitForSecondsRealtime(1.6f);
-        bombPrefab.gameObject.GetComponent<CircleCollider2D>().enabled = true;
+        yield return new WaitForSecondsRealtime(1.9f);
+        bombPrefab.gameObject.GetComponent<CircleCollider2D>().radius = 5f;
+        yield return new WaitForSecondsRealtime(0.3f);
+        bombPrefab.gameObject.GetComponent<CircleCollider2D>().radius = 0f;
     }
 
     void Flip() {

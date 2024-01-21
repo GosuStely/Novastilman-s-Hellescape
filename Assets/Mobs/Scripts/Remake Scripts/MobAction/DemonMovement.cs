@@ -99,12 +99,24 @@ public class DemonMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Arrow" || collision.tag == "Bomb")
+        if (collision.tag == "Arrow")
         {
             Destroy(collision.gameObject);
 
             HP -= 1;
             //FindObjectOfType<AudioManager>().Play("MobHit");
+            if (HP <= 0)
+            {
+                speed = 0;
+                isRunOutOfHP = true;
+                anim.SetTrigger("isDead");
+
+                StartCoroutine(DestroyAfterDeath());
+            }
+        }
+
+        if (collision.tag == "Bomb") {
+            HP -= 1;
             if (HP <= 0)
             {
                 speed = 0;
