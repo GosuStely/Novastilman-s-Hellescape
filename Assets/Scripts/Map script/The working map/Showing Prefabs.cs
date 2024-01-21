@@ -74,7 +74,7 @@ public class ShowingPrefabs : MonoBehaviour
             for (int i = 0; i < floorRooms; i++)
             {
 
-                showRooms(i,vector3, rooms);
+                showRooms(i, vector3, rooms);
                 showTeleports(vector3);
                 vector3.x += 80;
                 vector3.y = 0;
@@ -98,7 +98,7 @@ public class ShowingPrefabs : MonoBehaviour
             currentRoom = rooms[Random.Range(1, rooms.Length - 2)];
         }
 
-        if (i == 5)
+        if (i == 4 || i == 8)
         {
             currentRoom = rooms[0];
         }
