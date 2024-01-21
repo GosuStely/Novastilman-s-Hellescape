@@ -7,11 +7,11 @@ public class Menuscript : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync("OpeningScene");
+        SceneManager.LoadSceneAsync(1);
     }
     public void GoToSettingMenu()
     {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(4);
     }
     public void GoToMainMenu()
     {
