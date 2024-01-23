@@ -111,7 +111,7 @@ public class Eye_Movement : MonoBehaviour
 
                 StartCoroutine(DestroyAfterDeath());
             }
-            //FindObjectOfType<AudioManager>().Play("MobHit");
+            FindObjectOfType<AudioManager>().Play("MobHit");
         }
 
         if (collision.tag == "Bomb")
@@ -126,7 +126,7 @@ public class Eye_Movement : MonoBehaviour
 
                 StartCoroutine(DestroyAfterDeath());
             }
-            //FindObjectOfType<AudioManager>().Play("MobHit");
+            FindObjectOfType<AudioManager>().Play("MobHit");
         }
     }
 

@@ -102,7 +102,7 @@ public class GhostMovement : MonoBehaviour
         if (collision.tag == "Arrow")
         {
             Destroy(collision.gameObject);
-            //FindObjectOfType<AudioManager>().Play("MobHit");
+            FindObjectOfType<AudioManager>().Play("MobHit");
             HP -= 1;
             if (HP <= 0)
             {
@@ -117,7 +117,7 @@ public class GhostMovement : MonoBehaviour
 
         if (collision.tag == "Bomb") {
             HP -= 1;
-            //FindObjectOfType<AudioManager>().Play("MobHit");
+            FindObjectOfType<AudioManager>().Play("MobHit");
             if (HP <= 0)
             {
                 speed = 0;

@@ -98,10 +98,24 @@ public class Golemn_Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Arrow" || collision.tag == "Bomb")
+        if (collision.tag == "Arrow")
         {
             Destroy(collision.gameObject);
-            //FindObjectOfType<AudioManager>().Play("MobHit"); 
+            FindObjectOfType<AudioManager>().Play("MobHit"); 
+
+            HP -= 1;
+            if (HP <= 0)
+            {
+                isRunOutOfHP = true;
+                anim.SetTrigger("isDead");
+
+                StartCoroutine(DestroyAfterDeath());
+            }
+        }
+
+        if (collision.tag == "Bomb")
+        {
+            FindObjectOfType<AudioManager>().Play("MobHit"); 
 
             HP -= 1;
             if (HP <= 0)
