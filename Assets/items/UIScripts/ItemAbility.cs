@@ -7,11 +7,13 @@ public class ItemAbility : MonoBehaviour
     private Health health;
     private PlayerMovement player;
     private DemonMovement demon;
+    private Bomb bomb;
 
     void Start() {
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         demon = GameObject.FindGameObjectWithTag("Mob").GetComponent<DemonMovement>();
+        bomb = GameObject.FindGameObjectWithTag("Bomb").GetComponent<Bomb>();
     }
 
     public void Ring(int healthCount) {
@@ -47,6 +49,10 @@ public class ItemAbility : MonoBehaviour
       
         Destroy(gameObject);
         
+    }
+
+    public void Shield(float radius) {
+        bomb.GetComponent<CircleCollider2D>().radius = radius;
     }
 
     public void Helmet(int bulletCount) {

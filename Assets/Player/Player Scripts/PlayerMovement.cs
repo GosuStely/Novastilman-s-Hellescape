@@ -81,7 +81,7 @@ public class PlayerMovement : PLAYERSTATS
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextBomb) {
             var copy = Instantiate(bombPrefab, new Vector3(transform.position.x + 0.5f, transform.position.y -0.85f, transform.position.z), Quaternion.identity);
             // StartCoroutine(BombTicking()); // bomb timer
-            Destroy(copy, 2.2f);
+            Destroy(copy, 1.3f);
             nextBomb = Time.time + bombDelay;
         }
         
