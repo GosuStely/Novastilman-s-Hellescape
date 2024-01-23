@@ -80,8 +80,8 @@ public class PlayerMovement : PLAYERSTATS
 
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextBomb) {
             var copy = Instantiate(bombPrefab, new Vector3(transform.position.x + 0.5f, transform.position.y -0.85f, transform.position.z), Quaternion.identity);
-            StartCoroutine(BombTicking()); // bomb timer
-            Destroy(copy, 2.20f);
+            // StartCoroutine(BombTicking()); // bomb timer
+            Destroy(copy, 2.2f);
             nextBomb = Time.time + bombDelay;
         }
         
@@ -134,12 +134,12 @@ public class PlayerMovement : PLAYERSTATS
 
 
     // bomb coroutine
-    IEnumerator BombTicking() {
-        yield return new WaitForSecondsRealtime(1.9f);
-        bombPrefab.gameObject.GetComponent<CircleCollider2D>().radius = 5f;
-        yield return new WaitForSecondsRealtime(0.3f);
-        bombPrefab.gameObject.GetComponent<CircleCollider2D>().radius = 0f;
-    }
+    // IEnumerator BombTicking() {
+    //     yield return new WaitForSecondsRealtime(2f);
+    //     bombPrefab.gameObject.GetComponent<CircleCollider2D>().radius = 5f;
+    //     yield return new WaitForSecondsRealtime(0.2f);
+    //     bombPrefab.gameObject.GetComponent<CircleCollider2D>().radius = 0f;
+    // }
 
     void Flip() {
         isFacingRight = !isFacingRight;

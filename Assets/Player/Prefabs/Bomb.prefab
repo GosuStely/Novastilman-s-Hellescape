@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1516192414186121090}
   - component: {fileID: -806373421259469029}
   - component: {fileID: 1619470545792209536}
+  - component: {fileID: 9192155872830423044}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Bomb
@@ -120,7 +121,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1958996c8ef5ae2439d3801fc8d3d7d4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.852
+  m_Volume: 0.415
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -211,7 +212,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7807195891350963934}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -238,4 +239,16 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.0001
+  m_Radius: 5
+--- !u!114 &9192155872830423044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7807195891350963934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efa9569759a8dc4d86af166b8bc92f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

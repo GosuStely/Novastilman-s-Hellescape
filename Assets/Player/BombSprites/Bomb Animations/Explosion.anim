@@ -22,30 +22,30 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 1639583589, guid: 1b70cca9c8ab05044bb432bc754c61af, type: 3}
-    - time: 0.31666666
+    - time: 0.16666667
       value: {fileID: 1402984559, guid: 1b70cca9c8ab05044bb432bc754c61af, type: 3}
-    - time: 0.65
+    - time: 0.33333334
       value: {fileID: -522392219, guid: 1b70cca9c8ab05044bb432bc754c61af, type: 3}
-    - time: 0.96666664
+    - time: 0.5
       value: {fileID: 439577705, guid: 1b70cca9c8ab05044bb432bc754c61af, type: 3}
-    - time: 1.3333334
+    - time: 0.6666667
       value: {fileID: 1305341333, guid: 1b70cca9c8ab05044bb432bc754c61af, type: 3}
-    - time: 1.6666666
+    - time: 0.8333333
       value: {fileID: -1412618100, guid: 1b70cca9c8ab05044bb432bc754c61af, type: 3}
-    - time: 1.8333334
+    - time: 1
       value: {fileID: -394994838, guid: 1b70cca9c8ab05044bb432bc754c61af, type: 3}
-    - time: 1.9333333
-      value: {fileID: 413863983, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
-    - time: 2
-      value: {fileID: -1904292749, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
-    - time: 2.0166667
-      value: {fileID: 691380101, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
-    - time: 2.0833333
-      value: {fileID: -617923690, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
-    - time: 2.1
-      value: {fileID: 404489237, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
-    - time: 2.1666667
-      value: {fileID: -499389089, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
+    - time: 1.0833334
+      value: {fileID: -53313277, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
+    - time: 1.15
+      value: {fileID: -951322432, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
+    - time: 1.2
+      value: {fileID: -1991315421, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
+    - time: 1.2666667
+      value: {fileID: -951642081, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
+    - time: 1.3166667
+      value: {fileID: 1990044577, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
+    - time: 1.3833333
+      value: {fileID: -1191951343, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -75,18 +75,18 @@ AnimationClip:
     - {fileID: 1305341333, guid: 1b70cca9c8ab05044bb432bc754c61af, type: 3}
     - {fileID: -1412618100, guid: 1b70cca9c8ab05044bb432bc754c61af, type: 3}
     - {fileID: -394994838, guid: 1b70cca9c8ab05044bb432bc754c61af, type: 3}
-    - {fileID: 413863983, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
-    - {fileID: -1904292749, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
-    - {fileID: 691380101, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
-    - {fileID: -617923690, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
-    - {fileID: 404489237, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
-    - {fileID: -499389089, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
+    - {fileID: -53313277, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
+    - {fileID: -951322432, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
+    - {fileID: -1991315421, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
+    - {fileID: -951642081, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
+    - {fileID: 1990044577, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
+    - {fileID: -1191951343, guid: fe967fd638fe07d499e5b778ba20c6e3, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2.1833334
+    m_StopTime: 1.4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -105,4 +105,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 1.0833334
+    functionName: BombEnable
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.4
+    functionName: BombDisable
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
