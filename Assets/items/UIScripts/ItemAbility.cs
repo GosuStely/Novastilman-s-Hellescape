@@ -18,21 +18,25 @@ public class ItemAbility : MonoBehaviour
 
     public void Ring(int healthCount) {
         health.AddHealth(healthCount);
+        FindObjectOfType<AudioManager>().Play("PowerUp");
         Destroy(gameObject);
     }
 
     public void Boots(int speedCount) {
         player.playerSpeed = speedCount;
+        FindObjectOfType<AudioManager>().Play("PowerUp");
         Destroy(gameObject);
     }
 
     public void Bow(float damageCount) {
         player.playerDamage = damageCount;
+        FindObjectOfType<AudioManager>().Play("PowerUp");
         Destroy(gameObject);
     }
 
     public void Gloves(float dexterity) {
         player.fireDelay = dexterity;
+        FindObjectOfType<AudioManager>().Play("PowerUp");
         Destroy(gameObject);
     }
 
@@ -46,22 +50,27 @@ public class ItemAbility : MonoBehaviour
             health.hearts[i].gameObject.SetActive(true);
       
         }
+
+        FindObjectOfType<AudioManager>().Play("PowerUp");
       
         Destroy(gameObject);
         
     }
 
     public void Shield(float radius) {
+        FindObjectOfType<AudioManager>().Play("PowerUp");
         bomb.GetComponent<CircleCollider2D>().radius = radius;
     }
 
     public void Helmet(int bulletCount) {
         player.bulletSpeed = bulletCount;
+        FindObjectOfType<AudioManager>().Play("PowerUp");
         Destroy(gameObject);
     }
 
     public void Necklece(float time) {
         StartCoroutine(SlowWobblySpeed(time));
+        FindObjectOfType<AudioManager>().Play("PowerUp");
         Destroy(gameObject);
     }
 

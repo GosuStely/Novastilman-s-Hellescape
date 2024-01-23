@@ -12,6 +12,7 @@ public class Bomb : MonoBehaviour
 
     public void BombEnable() {
         circleCollider2D.enabled = true;
+        FindObjectOfType<AudioManager>().Play("BombExplosion");
     }
 
     public void BombDisable() {

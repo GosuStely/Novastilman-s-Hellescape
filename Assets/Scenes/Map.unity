@@ -6076,7 +6076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8444697267437273576, guid: 78a61fe994c78614aac7b64f2c0e228c, type: 3}
       propertyPath: sounds.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8444697267437273576, guid: 78a61fe994c78614aac7b64f2c0e228c, type: 3}
       propertyPath: sounds.Array.data[1].clip
@@ -6103,6 +6103,14 @@ PrefabInstance:
       value: BombExplosion
       objectReference: {fileID: 0}
     - target: {fileID: 8444697267437273576, guid: 78a61fe994c78614aac7b64f2c0e228c, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 45b5e3db58c592144a4b0b371cc88c54, type: 3}
+    - target: {fileID: 8444697267437273576, guid: 78a61fe994c78614aac7b64f2c0e228c, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: PowerUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8444697267437273576, guid: 78a61fe994c78614aac7b64f2c0e228c, type: 3}
       propertyPath: sounds.Array.data[0].pitch
       value: 0.58
       objectReference: {fileID: 0}
@@ -6116,7 +6124,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8444697267437273576, guid: 78a61fe994c78614aac7b64f2c0e228c, type: 3}
       propertyPath: sounds.Array.data[3].pitch
-      value: 0.58
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8444697267437273576, guid: 78a61fe994c78614aac7b64f2c0e228c, type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8444697267437273576, guid: 78a61fe994c78614aac7b64f2c0e228c, type: 3}
       propertyPath: sounds.Array.data[0].volume
@@ -6132,7 +6144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8444697267437273576, guid: 78a61fe994c78614aac7b64f2c0e228c, type: 3}
       propertyPath: sounds.Array.data[3].volume
-      value: 0.292
+      value: 0.339
+      objectReference: {fileID: 0}
+    - target: {fileID: 8444697267437273576, guid: 78a61fe994c78614aac7b64f2c0e228c, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.388
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
