@@ -211,6 +211,14 @@ public class PlayerMovement : PLAYERSTATS
 
     public void GetHP(int amount)
     {
-        playerHitpoint += amount;
+        // Ensure playerHitpoint doesn't exceed the maximum HP
+        if (playerHitpoint < HP)
+        {
+            playerHitpoint += amount;
+        } else if (playerHitpoint >= HP)
+        {
+            playerHitpoint += 0;
+        }
+        
     }
 }
