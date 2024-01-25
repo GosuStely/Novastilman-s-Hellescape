@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShowingPrefabs : MonoBehaviour
 {
+    public GameObject tutorialRoom;
     public int floorRooms;
     public GameObject[] FloorOne;
     public GameObject[] FloorTwo;
@@ -21,6 +22,7 @@ public class ShowingPrefabs : MonoBehaviour
     private int roomX = 17;
     private int roomY = 9;
     bool isShopRoom = false;
+    bool isTutorial = false;
     Vector3 vector3 = new Vector3(0, 0, 0);
 
     void Start()
@@ -96,6 +98,11 @@ public class ShowingPrefabs : MonoBehaviour
         else
         {
             currentRoom = rooms[Random.Range(1, rooms.Length - 2)];
+        }
+        if (!isTutorial && i == 0)
+        {
+            currentRoom = tutorialRoom;
+            isTutorial = false;
         }
 
         if (i == 4 || i == 8)
