@@ -1342,6 +1342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa540ef5e1563e245b5a7c8b66601d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialRoom: {fileID: 1689175459837697240, guid: 8ea642da692d51f4d97673178f0de94d, type: 3}
   floorRooms: 14
   FloorOne:
   - {fileID: 1689175459837697240, guid: 6a6bcaaeb1f37ad4b87a101c285ad624, type: 3}

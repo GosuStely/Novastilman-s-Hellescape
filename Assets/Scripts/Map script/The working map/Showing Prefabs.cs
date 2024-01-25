@@ -102,7 +102,7 @@ public class ShowingPrefabs : MonoBehaviour
         if (!isTutorial && i == 0)
         {
             currentRoom = tutorialRoom;
-            isTutorial = false;
+            isTutorial = true;
         }
 
         if (i == 4 || i == 8)
