@@ -60,6 +60,7 @@ public class ItemAbility : MonoBehaviour
     public void Shield(float radius) {
         FindObjectOfType<AudioManager>().Play("PowerUp");
         bomb.GetComponent<CircleCollider2D>().radius = radius;
+        Destroy(gameObject);
     }
 
     public void Helmet(int bulletCount) {
