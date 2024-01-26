@@ -40,10 +40,12 @@ public class GhostMovement : MonoBehaviour
 
     private void Update()
     {
+        //Set animation based on the current state of the enemy
         anim.SetBool("isChasing", isInChaseRange);
         anim.SetBool("isAttacking", isInAttackRange);
         anim.SetBool("isDead", isRunOutOfHP);
 
+        //Dectect player presence for chasing and attacking
         isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRadius, whatIsPlayer);
         isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
 

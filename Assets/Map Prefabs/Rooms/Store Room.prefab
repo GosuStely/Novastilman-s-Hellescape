@@ -719,11 +719,6 @@ MonoBehaviour:
   - {fileID: 3820686392413893064, guid: 5931bc7c5183fae4ab99054d23b26aef, type: 3}
   - {fileID: 3459660720654767303, guid: 5a85c25075e33b844911d0c0d3f1a005, type: 3}
   - {fileID: 5367699962930221618, guid: 69895798e9eefe94e8b2b0d0ca8258a7, type: 3}
-  - {fileID: 3844234375574841595, guid: ec5d9cf4e132f144bb2d609a89124e87, type: 3}
-  - {fileID: 8548568702907306432, guid: 18d9119904fefe34b92f85389cba0351, type: 3}
-  - {fileID: 8735952912702622711, guid: 1ba5a5f49e9560c4b9b45d2a8b6d17aa, type: 3}
-  - {fileID: 4627620739068079629, guid: f47b656acc6cae64fb544a33fd56f909, type: 3}
-  - {fileID: 4318847062274739761, guid: ef0bf16e469a50f408085eb450e308c3, type: 3}
   spawnPoints:
   - {fileID: 6331349672396460251}
   prefabToSpawn: {fileID: 0}
